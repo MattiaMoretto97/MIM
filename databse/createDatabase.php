@@ -12,7 +12,7 @@ if (!$conn) {
 }
  
 // Attempt create database query execution
-$sql = "CREATE DATABASE gestione_utenti";
+$sql = "CREATE DATABASE bookique";
 if(mysqli_query($conn, $sql)){
     echo "Database created successfully";
 } else{
