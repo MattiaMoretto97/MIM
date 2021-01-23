@@ -9,7 +9,7 @@ $dbname = "bookique";
 $conn = mysqli_connect($servername, $username, $password);
 // Connessione fallita
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    die("Connessione fallita: " . mysqli_connect_error());
 }
 
 

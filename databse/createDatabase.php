@@ -1,8 +1,5 @@
 <?php
-
-$servername = "localhost";
-$username = "root";
-$password = "";
+include('include/config.php');
  
 // Check connection
 $conn = mysqli_connect($servername, $username, $password);

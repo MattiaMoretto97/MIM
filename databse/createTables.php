@@ -1,23 +1,19 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bookique";
+include('include/config.php');
  
-// Check connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+// New connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    die ("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = 
-    "CREATE TABLE Ruoli (
+$sql = [ 
+    "CREATE TABLE ruoli (
         id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        nome VARCHAR(30) NOT NULL,
-    )";
-    
-    "CREATE TABLE Utenti (
+        nome VARCHAR(30) NOT NULL
+    );",
+    "CREATE TABLE utenti (
         id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         nome VARCHAR(30) NOT NULL,
         cognome VARCHAR(30) NOT NULL,
@@ -25,14 +21,42 @@ $sql =
         cf VARCHAR(30) NOT NULL,
         password VARCHAR(30) NOT NULL,
         idRuolo INT(6) UNSIGNED NOT NULL,
-            FOREIGN KEY (idRuolo) REFERENCES Ruoli(id)
-    )";
-    
-    if ($conn->query($sql) === TRUE) {
-        echo "Table created successfully";
+            FOREIGN KEY (idRuolo) REFERENCES ruoli(id)
+    );",
+    "CREATE TABLE libri (
+        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        titolo VARCHAR(30) NOT NULL,
+        autore VARCHAR(30) NOT NULL,
+        categoria VARCHAR(30) NOT NULL,
+        tipologia VARCHAR(30) NOT NULL,
+        isbn VARCHAR(30) NOT NULL,
+        casaEditrice VARCHAR(30) NOT NULL,
+        nascondi BOOLEAN NOT NULL
+    );",
+    "CREATE TABLE desiderati (
+        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        idUtente INT(6) UNSIGNED NOT NULL,
+        idLibro INT(6) UNSIGNED NOT NULL,
+            FOREIGN KEY (idUtente) REFERENCES utenti(id),
+            FOREIGN KEY (idLibro) REFERENCES libri(id)
+    );",
+    "CREATE TABLE letti (
+        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        idUtente INT(6) UNSIGNED NOT NULL,
+        idLibro INT(6) UNSIGNED NOT NULL,
+            FOREIGN KEY (idUtente) REFERENCES utenti(id),
+            FOREIGN KEY (idLibro) REFERENCES libri(id)
+    );"
+];
+
+for ($i = 0; $i < count($sql); $i++) {
+    if ($conn->query($sql[$i]) === TRUE) {
+        $conn->query($sql[$i]);
+        echo "Table created successfully! <br>";
     } else {
-        echo "Error creating table: " . $conn->error;
+        echo "Error creating tables: " . $conn->error . "<br>";
     }
+}
     
-    $conn->close();
+$conn->close();
 ?>
