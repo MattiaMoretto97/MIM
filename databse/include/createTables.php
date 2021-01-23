@@ -1,6 +1,6 @@
 <?php
 include('include/config.php');
- 
+
 $sql = [ 
     "CREATE TABLE ruoli (
         id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -43,9 +43,9 @@ $sql = [
 ];
 
 for ($i = 0; $i < count($sql); $i++) {
-    if (empty(mysqli_query($conn, $sql[$i]))) {
-        mysqli_query($conn, $sql[$i]);
-        //echo "Table created successfully! <br>";
+    if ($conn->query($sql[$i]) === TRUE) {
+        $conn->query($sql[$i]);
+        echo "Table created successfully! <br>";
     } else {
         echo "Error creating tables: " . $conn->error . "<br>";
     }
