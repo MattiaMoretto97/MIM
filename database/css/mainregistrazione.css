@@ -1,0 +1,67 @@
+.scritte h1{
+    margin-left: 60px;
+    margin-top:30px;
+    
+}
+.scritte p{
+    margin-left: 60px;
+    padding:5px;
+}
+.pulsanti_inserimento input{
+    margin-top: 15px;
+    margin-left: 70px;
+}
+.termini section{
+    margin-top: 15px;
+    margin-left: 75px;
+}
+.bottone-superiore button{
+    margin-top: 50px;
+    margin-left: 75px;
+    outline: none;  
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-align:center;
+    background:orangered;
+    box-shadow: 3px 3px 8px #b1b1b1,
+      -3px -3px 8px #ffffff;
+    transition: 0.5s;
+    padding: 10px;
+  }
+  .bottone-superiore button:hover{
+    background-color: white;
+    color: orangered;
+  }
+  .bottone-superiore button:active{
+    background-color: white;
+    color: orangered;
+  }
+  .bottone-inferiore button{
+    margin-top:20px;
+    margin-left: 115px;
+    outline: none;  
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 70px;
+    color: #fff;
+    text-align:center;
+    background:orangered;
+    box-shadow: 3px 3px 8px #b1b1b1,
+      -3px -3px 8px #ffffff;
+    transition: 0.5s;
+    padding: 10px;
+  }
+  .bottone-inferiore button:hover{
+    background-color: white;
+    color: orangered;
+  }
+  .bottone-inferiore button:active{
+    background-color: white;
+    color: orangered;
+  }
