@@ -7,15 +7,15 @@
     margin-left: 60px;
     padding:5px;
 }
-.pulsanti_inserimento input{
+.pulsanti-inserimento input{
     margin-top: 15px;
     margin-left: 70px;
 }
-.termini section{
+.checkbox section{
     margin-top: 15px;
     margin-left: 75px;
 }
-.bottone-superiore button{
+.bottoni-superiore button{
     margin-top: 50px;
     margin-left: 75px;
     outline: none;  
@@ -32,17 +32,17 @@
     transition: 0.5s;
     padding: 10px;
   }
-  .bottone-superiore button:hover{
+  .bottoni-superiore button:hover{
     background-color: white;
     color: orangered;
   }
-  .bottone-superiore button:active{
+  .bottoni-superiore button:active{
     background-color: white;
     color: orangered;
   }
   .bottone-inferiore button{
     margin-top:20px;
-    margin-left: 115px;
+    margin-left: 135px;
     outline: none;  
     border: none;
     cursor: pointer;
@@ -64,4 +64,7 @@
   .bottone-inferiore button:active{
     background-color: white;
     color: orangered;
+  }
+  .img figure img{
+      float: right;
   }
