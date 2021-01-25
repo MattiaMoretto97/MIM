@@ -1,70 +1,88 @@
-.paragrafo h1{
-    margin-left: 60px;
-    margin-top:30px;
-    
-}
-.paragrafo p{
-    margin-left: 60px;
-    padding:5px;
-}
-.pulsanti-inserimento input{
-    margin-top: 15px;
-    margin-left: 70px;
-}
-.checkbox section{
-    margin-top: 15px;
-    margin-left: 75px;
-}
+
+  .paragrafo h1{
+     text-align: center;
+      
+  }
+  .paragrafo p{
+  text-align: center;
+      padding:5px;
+  }
+  .pulsanti-inserimento input{
+     margin: 15px;
+     margin-left: 70px;
+
+  }
+  .checkbox section{
+      margin-left: 50px;
+  }
 .bottoni-superiore button{
-    margin-top: 50px;
-    margin-left: 75px;
-    outline: none;  
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
-    text-align:center;
-    background:orangered;
-    box-shadow: 3px 3px 8px #b1b1b1,
-      -3px -3px 8px #ffffff;
-    transition: 0.5s;
-    padding: 10px;
-  }
-  .bottoni-superiore button:hover{
-    background-color: white;
-    color: orangered;
-  }
-  .bottoni-superiore button:active{
-    background-color: white;
-    color: orangered;
-  }
-  .bottone-inferiore button{
-    margin-top:20px;
-    margin-left: 135px;
-    outline: none;  
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: 70px;
-    color: #fff;
-    text-align:center;
-    background:orangered;
-    box-shadow: 3px 3px 8px #b1b1b1,
-      -3px -3px 8px #ffffff;
-    transition: 0.5s;
-    padding: 10px;
-  }
-  .bottone-inferiore button:hover{
-    background-color: white;
-    color: orangered;
-  }
-  .bottone-inferiore button:active{
-    background-color: white;
-    color: orangered;
-  }
-  .img figure img{
-      float: right;
-  }
+      float:right;
+      margin: 30px;
+      width: 80%;
+      outline: none;  
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+      font-size: 20px;
+      font-weight: 700;
+      color:white;
+      text-align:center;
+      background:orangered;
+      box-shadow: 3px 3px 8px #b1b1b1,
+        -3px -3px 8px #ffffff;
+      transition: 0.5s;
+      padding: 10px;
+    }
+    .bottoni-superiore button:hover{
+      background-color: white;
+      color: orangered;
+    }
+    .bottoni-superiore button:active{
+      background-color: white;
+      color: orangered;
+    }
+    .bottone-inferiore button{
+        margin-left: 100px;
+        margin-top: 20px;
+        height: 50%;
+        width: 50%;
+      text-align: center;
+      outline: none;  
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+      font-size: 20px;
+      font-weight: 70px;
+      color: #fff;
+      text-align:center;
+      background:orangered;
+      box-shadow: 3px 3px 8px #b1b1b1,
+        -3px -3px 8px #ffffff;
+      transition: 0.5s;
+      padding: 10px;
+    }
+    .bottone-inferiore button:hover{
+      background-color: white;
+      color: orangered;
+    }
+    .bottone-inferiore button:active{
+      background-color: white;
+      color: orangered;
+    }
+.left-container {
+        position: fixed;
+        float: left;
+        height: 100vh;
+        width: 50%;
+      }
+.right-container {
+        position: fixed;
+        right: 0;
+        height: 100vh;
+        width: 50%;
+        background-color: mix(#fff, #ba5643, 25%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
