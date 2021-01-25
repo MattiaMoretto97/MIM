@@ -4,18 +4,23 @@ include('include/connectToServer.php');
 include('include/connectToDatabase.php');
 include('include/createTables.php');
 */
-require_once "router.php";
-include "about.php";
+include "router.php";
+include "src/home.php";
+include "src/about.php";
+include "src/contact.php";
+
 
 
 $route = new Route();
 
-$route->add('/', new About());
-$route->add('/about', new About());
-$route->add('/contact', new About());
+$route->add('/',function() {
+    echo 'Ehi questa è la home';
+});
+$route->add('/about', 'About');
+$route->add('/contact', 'Contact');
 
-echo '<pre>';
-print_r($route);
+//echo '<pre>';
+//print_r($route);
 
 $route->submit();
 

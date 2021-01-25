@@ -4,8 +4,8 @@ class About {
 
     public function __construct()
     {
-        echo 'Questa è la homeeee';
-        $this->_other;
+        echo 'Questa è la pagina abouttt';
+        $this->_other();
     }
 
     protected function _other() {
