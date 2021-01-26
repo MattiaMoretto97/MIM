@@ -1,30 +1,30 @@
 .paragrafo h1{
-    margin-left: 60px;
-    margin-top:30px;
-    
+    text-align: center;
+    margin-top: 30px;
 }
 .paragrafo p{
-    margin-left: 60px;
-    padding:5px;
+    text-align: center;
 }
-.pulsanti_inserimento input{
-    margin-top: 15px;
-    margin-left: 70px;
+.pulsanti-inserimento{
+    text-align: center;
 }
-.termini section{
-    margin-top: 15px;
-    margin-left: 75px;
+.pulsanti-inserimento input{
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 15px;
 }
-.bottone-superiore button{
-    margin-top: 50px;
-    margin-left: 75px;
+
+.bottone-superiore-dx{
+    margin-top: 60px;
+    width: 20%;
+    margin-left: 200px;
     outline: none;  
     border: none;
     cursor: pointer;
     border-radius: 20px;
     font-size: 20px;
     font-weight: 700;
-    color: #fff;
+    color:white;
     text-align:center;
     background:orangered;
     box-shadow: 3px 3px 8px #b1b1b1,
@@ -32,36 +32,75 @@
     transition: 0.5s;
     padding: 10px;
   }
-  .bottone-superiore button:hover{
+  .bottone-superiore-dx:hover{
     background-color: white;
     color: orangered;
   }
-  .bottone-superiore button:active{
+  .bottone-superiore-sx:hover{
+    background-color: orangered;
+    color: white;
+  }
+  .bottone-superiore-dx:active{
     background-color: white;
     color: orangered;
   }
-  .bottone-inferiore button{
-    margin-top:20px;
-    margin-left: 115px;
+  .bottone-superiore-sx:active{
+    background-color: orangered;
+    color: white;
+  }
+  .bottone-superiore-sx{
+      margin-top: 60px;
+    width: 20%;
+    margin-right: 200px;
+    
+   float: right;
     outline: none;  
     border: none;
     cursor: pointer;
     border-radius: 20px;
     font-size: 20px;
-    font-weight: 70px;
-    color: #fff;
+    font-weight: 700;
+    color:orangered;
     text-align:center;
-    background:orangered;
+    background:white;
     box-shadow: 3px 3px 8px #b1b1b1,
       -3px -3px 8px #ffffff;
     transition: 0.5s;
     padding: 10px;
   }
-  .bottone-inferiore button:hover{
+  .checkbox {
+      text-align: center;
+      padding: 5px;
+      margin-top: 10px;
+  }
+  .bottone-inferiore{
+ margin-top: 30px;
+  width: 20%;
+  margin-right: 50px;
+  margin-left: 315px;
+  outline: none;  
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color:white;
+  text-align:center;
+  background:orangered;
+  box-shadow: 3px 3px 8px #b1b1b1,
+    -3px -3px 8px #ffffff;
+  transition: 0.5s;
+  padding: 10px;
+}
+.bottone-inferiore:active{
     background-color: white;
     color: orangered;
   }
-  .bottone-inferiore button:active{
+.bottone-inferiore:hover{
     background-color: white;
     color: orangered;
-  }
+ }
+ img{
+   display: inline;
+   margin-top: 125px;
+ }
