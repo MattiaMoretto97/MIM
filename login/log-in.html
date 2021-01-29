@@ -9,60 +9,34 @@
         <link rel="icon" href="images/logo.png">
     </head>
     <body>
-        <div class="login-wrapper d-flex">
-            <div class="left-container  d-flex justify-content-center align-items-center">
-              <div class="login-container">
-                <div class="container">
-                    <div class="row">
-                        <div class=" col-sm-6 bottoni-superiore">
-                            <button >REGISTRATI</button>
-                        </div>
-                        <div class=" col-sm-6 bottoni-superiore">
-                            <button>LOGIN</button>
-                        </div>
+        <div class="d-flex  bd-highlight">
+            <div class="p-2 flex-fill bd-highlight">
+                    <button class="bottone-superiore-dx">REGISTRATI</button>
+                    <button class="bottone-superiore-sx">LOGIN</button><br/>
+                    <section class="paragrafo">
+                        <h1>Log In</h1>
+                        <p>bentornato <br/> Per favore, accedi al tuo account</p> <br/>
+                    </section>
+                    <form class="pulsanti-inserimento">
+                        <label for="fname"></label>
+                        <input type="text" id="fname" name="fname" placeholder="username"><br>
+                        <label for="lname"></label>
+                        <input type="text" id="lname" name="lname" placeholder="password"><br>                       
+                    </form>
+                    <form>
+                        <section  class="checkbox" title="checkbox">
+                        <input type="checkbox" value="None" id="squaredFour" name="check" />
+                        <label for="squaredFour">Ricordami  <a href="#">Password dimenticata?</a></label> 
+                        </section>
+                    </form>
+                    <div>
+                        <button class="bottone-inferiore">ACCEDI</button>
                     </div>
-                    <div class="row">
-                        <div class=" col-sm-12 bottoni-superiore">
-                            <article class="paragrafo">
-                                <h1>Log In</h1>
-                                <p>bentornato <br/> Per favore, accedi al tuo account</p> <br/>
-                            </article>
-                        </div>
-                    </div>
-                  <form class="pulsanti-inserimento">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <div class="form-group">
-                            
-                            <label for="fname"></label>
-                            <input type="text" id="fname" name="fname" placeholder="username"><br>
-                            <label for="lname"></label>
-                            <input type="text" id="lname" name="lname" placeholder="password"><br> 
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <form>
-                            <section  class="checkbox" title="checkbox">
-                            <input type="checkbox" value="None" id="squaredFour" name="check" />
-                            <label for="squaredFour">Ricordami  <a href="#">Password dimenticata?</a></label> 
-                            </section>
-                        </form>
-                        <div class="form-group w-100">
-                            <div class="bottone-inferiore">
-                                <button>ACCEDI</button>
-                            </div>
-                        </div>
-                      </div>
-                  </form>
-                </div>
-              </div>
             </div>
-            <div class="right-container">
-                <figure class="ml-auto p-2">
-                    <img class="img-responsive" src="images/img.jpeg" alt="img-bookique" >
-                </figure>
+            <div class="p-2 flex-fill bd-highlight">
+                    <figure class="ml-auto p-2">
+                         <img class="img-responsive" src="images/img.jpeg" alt="img-bookique">
+                    </figure>
             </div>
         </div>
     </body>
