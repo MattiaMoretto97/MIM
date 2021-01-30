@@ -53,16 +53,16 @@
     </nav>
 
     <!-- Search Bar -->
-    <div class="wrap">
+    <div class="d-flex align-content-center flex-wrap SearchBar" style="width: 30%; margin:auto; margin-top:50px; margin-bottom:50px">
         <div class="search">
-            <input type="text" class="searchTerm" placeholder="Search here...">
-            <select class="form-select" aria-label="Filtra ricerca">
-            <option selected>Filtra Categoria</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <input type="text" class="searchTerm border border-danger" placeholder="Search here...">
+            <select class="form-select border border-danger" aria-label="Filtra ricerca">
+            <option selected>Tutto</option>
+            <option value="1">Titolo</option>
+            <option value="2">Autore</option>
+            <option value="3">Casa Editrice</option>
             </select>
-            <button type="submit" class="searchButton">
+            <button type="submit" style="background-color: red;" class="searchButton border border-danger">
                 <i class="fa fa-search"></i>
             </button>
         </div>
@@ -70,8 +70,59 @@
 
     <!-- Nuove Aggiunte -->
     <div>
-        <h2>Ultime Aggiunte</h2>
+        <h2 style="margin: 50px;">Nuove Aggiunte</h2>
     </div>
+    <div class="card border-dark" style="width: 18rem; margin:50px">
+        <img class="card-img-top" src="img/libro.jpg" alt="Card image cap">
+        <div class="card-body" style="margin: auto;">
+        <h5 class="card-title" style="text-align: center;">Titolo</h5>
+        <button type="button" class="btn" href="#">Vedi dettaglio</button>
+    </div>
+    </div>
+
+    <!-- Più visti -->
+    <div>
+        <h2 style="margin: 50px;">Più visti</h2>
+    </div>
+    <div class="card border-dark" style="width: 18rem; margin:50px">
+        <img class="card-img-top" src="img/libro.jpg" alt="Card image cap">
+        <div class="card-body" style="margin: auto;">
+        <h5 class="card-title" style="text-align: center;">Titolo</h5>
+        <button type="button" class="btn" href="#">Vedi dettaglio</button>
+    </div>
+    </div>
+
+    <!-- Più letti -->
+    <div>
+        <h2 style="margin: 50px;">Più letti</h2>
+    </div>
+    <div class="card border-dark" style="width: 18rem; margin:50px">
+        <img class="card-img-top" src="img/libro.jpg" alt="Card image cap">
+        <div class="card-body" style="margin: auto;">
+        <h5 class="card-title" style="text-align: center;">Titolo</h5>
+        <button type="button" class="btn" href="#">Vedi dettaglio</button>
+    </div>
+    </div>
+
+    <!-- Lista libri -->
+    <div>
+        <h2 style="margin: 50px;">Lista libri</h2>
+    </div>
+    <div class="card border-dark" style="width: 18rem; margin:50px">
+        <img class="card-img-top" src="img/libro.jpg" alt="Card image cap">
+        <div class="card-body" style="margin: auto;">
+        <h5 class="card-title" style="text-align: center;">Titolo</h5>
+        <button type="button" class="btn" href="#">Vedi dettaglio</button>
+    </div>
+    </div>
+    
+     <!-- Footer -->
+    <footer>
+        <div class="text-center p-3" style="background-color: black; color:white">
+            © 2021 Copyright:
+            <a class="text-white" >Bookique</a>
+        </div>
+    </footer>
     
 </body>
 </html>
