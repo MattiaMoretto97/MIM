@@ -1,4 +1,5 @@
 <?php
+
 class Route {
 
     private $_uri = [];
@@ -30,7 +31,7 @@ class Route {
                 if (is_string($this->_method[$key])) {
 
                     $useMethod = $this->_method[$key];
-                    new $useMethod();
+                    (new $useMethod())->handle();
                 } else {
 
                     call_user_func($this->_method[$key]);
