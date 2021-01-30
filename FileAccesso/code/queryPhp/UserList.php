@@ -13,7 +13,7 @@ if (!$conn) {
 }
 
 $db = new PDO($dsn, $username, $password);
-$query = "Select Titolo FROM libri WHERE nascondi=1 ORDER BY id DESC LIMIT 10";
+$query = "Select nome,cognome,email,cf FROM utenti";
 
 $utenti = array();
 $sth = $db->query($query);

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.0.4
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Creato il: Gen 30, 2021 alle 12:39
+- Versione del server: 10.4.16-MariaDB
+- Versione PHP: 7.4.12
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="bookique" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="desiderati">
+                CREATE TABLE `desiderati` (
+                  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+                  `idUtente` int(6) unsigned NOT NULL,
+                  `idLibro` int(6) unsigned NOT NULL,
+                  PRIMARY KEY (`id`),
+                  KEY `idUtente` (`idUtente`),
+                  KEY `idLibro` (`idLibro`),
+                  CONSTRAINT `desiderati_ibfk_1` FOREIGN KEY (`idUtente`) REFERENCES `utenti` (`id`),
+                  CONSTRAINT `desiderati_ibfk_2` FOREIGN KEY (`idLibro`) REFERENCES `libri` (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'bookique'
+    -->
+    <database name="bookique">
+        <!-- Tabella desiderati -->
+        <table name="desiderati">
+            <column name="id">1</column>
+            <column name="idUtente">3</column>
+            <column name="idLibro">8</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">2</column>
+            <column name="idUtente">4</column>
+            <column name="idLibro">11</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">3</column>
+            <column name="idUtente">5</column>
+            <column name="idLibro">11</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">4</column>
+            <column name="idUtente">6</column>
+            <column name="idLibro">5</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">5</column>
+            <column name="idUtente">4</column>
+            <column name="idLibro">15</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">6</column>
+            <column name="idUtente">4</column>
+            <column name="idLibro">4</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">7</column>
+            <column name="idUtente">5</column>
+            <column name="idLibro">2</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">8</column>
+            <column name="idUtente">3</column>
+            <column name="idLibro">2</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">9</column>
+            <column name="idUtente">4</column>
+            <column name="idLibro">2</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">10</column>
+            <column name="idUtente">6</column>
+            <column name="idLibro">2</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">11</column>
+            <column name="idUtente">2</column>
+            <column name="idLibro">2</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">12</column>
+            <column name="idUtente">2</column>
+            <column name="idLibro">10</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">13</column>
+            <column name="idUtente">5</column>
+            <column name="idLibro">10</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">14</column>
+            <column name="idUtente">2</column>
+            <column name="idLibro">7</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">15</column>
+            <column name="idUtente">2</column>
+            <column name="idLibro">14</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">16</column>
+            <column name="idUtente">3</column>
+            <column name="idLibro">10</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">17</column>
+            <column name="idUtente">2</column>
+            <column name="idLibro">11</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">18</column>
+            <column name="idUtente">2</column>
+            <column name="idLibro">8</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">19</column>
+            <column name="idUtente">4</column>
+            <column name="idLibro">8</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">20</column>
+            <column name="idUtente">6</column>
+            <column name="idLibro">12</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">21</column>
+            <column name="idUtente">3</column>
+            <column name="idLibro">12</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">22</column>
+            <column name="idUtente">5</column>
+            <column name="idLibro">12</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">23</column>
+            <column name="idUtente">4</column>
+            <column name="idLibro">12</column>
+        </table>
+        <table name="desiderati">
+            <column name="id">24</column>
+            <column name="idUtente">2</column>
+            <column name="idLibro">12</column>
+        </table>
+    </database>
+</pma_xml_export>
