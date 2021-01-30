@@ -13,7 +13,12 @@ if (!$conn) {
 }
 
 $db = new PDO($dsn, $username, $password);
-$query = "Select Titolo FROM libri WHERE nascondi=1 ORDER BY id DESC LIMIT 10";
+$query = "SELECT COUNT(idLibro)AS desiderato,Titolo FROM `desiderati` 
+INNER JOIN libri 
+ON desiderati.idLibro = libri.id 
+WHERE nascondi=1 
+GROUP BY Titolo 
+ORDER BY desiderato DESC LIMIT 10";
 
 $utenti = array();
 $sth = $db->query($query);
