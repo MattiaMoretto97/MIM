@@ -1,12 +1,16 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>bookique</title>
         <meta charset="utf-8">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
-        crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="css/mainlogin.css">
-        <link rel="icon" href="images/logo.png">
+        
+        <link rel="stylesheet" type="text/css" href="asset/css/bootstrap/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="asset/css/custom/mainlogin.css">
+        <link rel="icon" href="asset/images/logo.png">
     </head>
     <body>
         <div class="d-flex  bd-highlight">
@@ -35,9 +39,12 @@
             </div>
             <div class="p-2 flex-fill bd-highlight">
                     <figure class="ml-auto p-2">
-                         <img class="img-responsive" src="images/img.jpeg" alt="img-bookique">
+                         <img class="img-responsive" src="asset/images/img.jpeg" alt="img-bookique">
                     </figure>
             </div>
         </div>
+        
+        <script  type="text/javascript" src="asset/js/jquery.js"></script>
+        <script type="text/javascript" src="asset/js/bootstrap.js"></script>
     </body>
 </html>

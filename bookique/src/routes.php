@@ -1,13 +1,16 @@
 <?php
 
-include "app/controllers/contact.php";
+include "src/controllers/home-controller.php";
+include "src/controllers/contact-controller.php";
+include "src/controllers/login-controller.php";
+include "src/controllers/registration-controller.php";
 
 
 $router = new Route();
 
-$router->add('/',function() {
-    echo 'Ehi questa è la home';
-});
+$router->add('/', 'Home');
+$router->add('login', 'Login');
+$router->add('registration', 'Registration');
 $router->add('/about', 'About');
 $router->add('/contact', 'Contact');
 

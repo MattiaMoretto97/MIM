@@ -1,7 +1,7 @@
 <?php 
 
-include "app/router.php";
-include "app/routes.php";
+include "src/router.php";
+include "src/routes.php";
 
 
  ?>
