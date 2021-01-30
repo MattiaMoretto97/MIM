@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.0.4
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Creato il: Gen 30, 2021 alle 12:36
+- Versione del server: 10.4.16-MariaDB
+- Versione PHP: 7.4.12
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="bookique" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="utenti">
+                CREATE TABLE `utenti` (
+                  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+                  `nome` varchar(30) NOT NULL,
+                  `cognome` varchar(30) NOT NULL,
+                  `email` varchar(30) NOT NULL,
+                  `cf` varchar(30) NOT NULL,
+                  `password` varchar(30) NOT NULL,
+                  `idRuolo` int(6) unsigned NOT NULL,
+                  PRIMARY KEY (`id`),
+                  KEY `idRuolo` (`idRuolo`),
+                  CONSTRAINT `utenti_ibfk_1` FOREIGN KEY (`idRuolo`) REFERENCES `ruoli` (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'bookique'
+    -->
+    <database name="bookique">
+        <!-- Tabella utenti -->
+        <table name="utenti">
+            <column name="id">2</column>
+            <column name="nome">superadmin</column>
+            <column name="cognome">superadmin</column>
+            <column name="email">superadmin</column>
+            <column name="cf">superadmin</column>
+            <column name="password">password</column>
+            <column name="idRuolo">1</column>
+        </table>
+        <table name="utenti">
+            <column name="id">3</column>
+            <column name="nome">Mattia</column>
+            <column name="cognome">Moretto</column>
+            <column name="email">mattiamoretto97@gmail.com</column>
+            <column name="cf">MRTMTT97L05L781T</column>
+            <column name="password">313233343539383736</column>
+            <column name="idRuolo">2</column>
+        </table>
+        <table name="utenti">
+            <column name="id">4</column>
+            <column name="nome">Paolo </column>
+            <column name="cognome">Maruca</column>
+            <column name="email">paolomaruca@gmail.com</column>
+            <column name="cf">gattiISLife</column>
+            <column name="password">6761747469</column>
+            <column name="idRuolo">2</column>
+        </table>
+        <table name="utenti">
+            <column name="id">5</column>
+            <column name="nome">Michele</column>
+            <column name="cognome">Pasetto</column>
+            <column name="email">michelecroceverde@borgoroma.co</column>
+            <column name="cf">MichiPase</column>
+            <column name="password">chimica</column>
+            <column name="idRuolo">2</column>
+        </table>
+        <table name="utenti">
+            <column name="id">6</column>
+            <column name="nome">Federico</column>
+            <column name="cognome">Cracco</column>
+            <column name="email">fedecracco@gmail.com</column>
+            <column name="cf">fedecracco</column>
+            <column name="password">6D617374657263686566</column>
+            <column name="idRuolo">3</column>
+        </table>
+    </database>
+</pma_xml_export>

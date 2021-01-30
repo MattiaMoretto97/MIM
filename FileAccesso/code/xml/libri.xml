@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.0.4
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Creato il: Gen 30, 2021 alle 12:38
+- Versione del server: 10.4.16-MariaDB
+- Versione PHP: 7.4.12
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="bookique" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="libri">
+                CREATE TABLE `libri` (
+                  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+                  `titolo` varchar(30) NOT NULL,
+                  `autore` varchar(30) NOT NULL,
+                  `categoria` varchar(30) NOT NULL,
+                  `tipologia` varchar(30) NOT NULL,
+                  `isbn` varchar(30) NOT NULL,
+                  `casaEditrice` varchar(30) NOT NULL,
+                  `nascondi` tinyint(1) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'bookique'
+    -->
+    <database name="bookique">
+        <!-- Tabella libri -->
+        <table name="libri">
+            <column name="id">1</column>
+            <column name="titolo">Il Decamerone</column>
+            <column name="autore">Boccaccio</column>
+            <column name="categoria"></column>
+            <column name="tipologia"></column>
+            <column name="isbn"></column>
+            <column name="casaEditrice"></column>
+            <column name="nascondi">1</column>
+        </table>
+        <table name="libri">
+            <column name="id">2</column>
+            <column name="titolo">La Coscienza di Zeno</column>
+            <column name="autore">Svevo</column>
+            <column name="categoria"></column>
+            <column name="tipologia"></column>
+            <column name="isbn"></column>
+            <column name="casaEditrice"></column>
+            <column name="nascondi">1</column>
+        </table>
+        <table name="libri">
+            <column name="id">3</column>
+            <column name="titolo">Odissa</column>
+            <column name="autore">Omero</column>
+            <column name="categoria"></column>
+            <column name="tipologia"></column>
+            <column name="isbn"></column>
+            <column name="casaEditrice"></column>
+            <column name="nascondi">1</column>
+        </table>
+        <table name="libri">
+            <column name="id">4</column>
+            <column name="titolo">Il ritratto di Dorian Gray</column>
+            <column name="autore">Oscar Wilde</column>
+            <column name="categoria"></column>
+            <column name="tipologia"></column>
+            <column name="isbn"></column>
+            <column name="casaEditrice"></column>
+            <column name="nascondi">1</column>
+        </table>
+        <table name="libri">
+            <column name="id">5</column>
+            <column name="titolo">Don Chisciotte</column>
+            <column name="autore">Miguel de Cervantes</column>
+            <column name="categoria"></column>
+            <column name="tipologia"></column>
+            <column name="isbn"></column>
+            <column name="casaEditrice"></column>
+            <column name="nascondi">1</column>
+        </table>
+        <table name="libri">
+            <column name="id">6</column>
+            <column name="titolo">La divina commedia</column>
+            <column name="autore">Dante Alighieri</column>
+            <column name="categoria"></column>
+            <column name="tipologia"></column>
+            <column name="isbn"></column>
+            <column name="casaEditrice"></column>
+            <column name="nascondi">1</column>
+        </table>
+        <table name="libri">
+            <column name="id">7</column>
+            <column name="titolo">Le avventure di pinocchio</column>
+            <column name="autore">Carlo Collodi</column>
+            <column name="categoria"></column>
+            <column name="tipologia"></column>
+            <column name="isbn"></column>
+            <column name="casaEditrice"></column>
+            <column name="nascondi">1</column>
+        </table>
+        <table name="libri">
+            <column name="id">8</column>
+            <column name="titolo">Il conte di Montecristo</column>
+            <column name="autore">Alexandre Dumas</column>
+            <column name="categoria"></column>
+            <column name="tipologia"></column>
+            <column name="isbn"></column>
+            <column name="casaEditrice"></column>
+            <column name="nascondi">1</column>
+        </table>
+        <table name="libri">
+            <column name="id">9</column>
+            <column name="titolo">Dracula</column>
+            <column name="autore">Bram Stoker</column>
+            <column name="categoria"></column>
+            <column name="tipologia"></column>
+            <column name="isbn"></column>
+            <column name="casaEditrice"></column>
+            <column name="nascondi">1</column>
+        </table>
+        <table name="libri">
+            <column name="id">10</column>
+            <column name="titolo">Ulisse</column>
+            <column name="autore">James Joyce</column>
+            <column name="categoria"></column>
+            <column name="tipologia"></column>
+            <column name="isbn"></column>
+            <column name="casaEditrice"></column>
+            <column name="nascondi">1</column>
+        </table>
+        <table name="libri">
+            <column name="id">11</column>
+            <column name="titolo">Il nome della rosa</column>
+            <column name="autore">Umberto Eco</column>
+            <column name="categoria"></column>
+            <column name="tipologia"></column>
+            <column name="isbn"></column>
+            <column name="casaEditrice"></column>
+            <column name="nascondi">1</column>
+        </table>
+        <table name="libri">
+            <column name="id">12</column>
+            <column name="titolo">Il principer</column>
+            <column name="autore">Macchiavelli</column>
+            <column name="categoria"></column>
+            <column name="tipologia"></column>
+            <column name="isbn"></column>
+            <column name="casaEditrice"></column>
+            <column name="nascondi">1</column>
+        </table>
+        <table name="libri">
+            <column name="id">13</column>
+            <column name="titolo">Il grande Gatsby</column>
+            <column name="autore">Scott Fitzgerald</column>
+            <column name="categoria"></column>
+            <column name="tipologia"></column>
+            <column name="isbn"></column>
+            <column name="casaEditrice"></column>
+            <column name="nascondi">1</column>
+        </table>
+        <table name="libri">
+            <column name="id">14</column>
+            <column name="titolo">I miserabili</column>
+            <column name="autore">VIctor Hugo</column>
+            <column name="categoria"></column>
+            <column name="tipologia"></column>
+            <column name="isbn"></column>
+            <column name="casaEditrice"></column>
+            <column name="nascondi">1</column>
+        </table>
+        <table name="libri">
+            <column name="id">15</column>
+            <column name="titolo">Fahrenhait</column>
+            <column name="autore">Ray Bradbury</column>
+            <column name="categoria"></column>
+            <column name="tipologia"></column>
+            <column name="isbn"></column>
+            <column name="casaEditrice"></column>
+            <column name="nascondi">1</column>
+        </table>
+    </database>
+</pma_xml_export>
