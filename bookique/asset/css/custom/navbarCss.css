@@ -56,3 +56,24 @@
   .wrap {
     width: 30%;
   }
+  .inserimento {
+    text-align: center;
+  }
+  .titolo{
+    text-align: center;
+  }
+  #pname{
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+  }
+  #fname{
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+  }
+  #lname{
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+  }
