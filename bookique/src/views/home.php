@@ -72,7 +72,7 @@
         <img class="card-img-top" src="asset/images/libro.jpg" alt="Card image cap">
         <div class="card-body" style="margin: auto;">
         <h5 class="card-title" style="text-align: center;">Titolo</h5>
-        <button type="button" class="btn" href="#">Vedi dettaglio</button>
+        <button type="button" class="btn" href="#" data-toggle="modal" data-target="#dettagliModal">Vedi dettaglio</button>
     </div>
     </div>
 
@@ -147,6 +147,74 @@
       </div>
     </div>
   </div>
+  <!--modal window dettaglio libro-->
+    <div class="modal fade" id="dettagliModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+    <div class="container">
+    <div class="row intestazione">
+            <header class="col-sm-12">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </header>
+            <h1>TITOLO</h1>
+        </div>
+
+      
+          <div class="row inserimento">
+            <figure class="col-sm-6">
+              <img src="asset/images/libro.jpg" alt="img-bookique" class="img-responsive" width="250px"/>
+            </figure>
+            <form class="col-sm-4">
+              <div
+                type="text"
+                id="fname"
+                name="fname"
+                placeholder="AUTORE">
+                AUTORE
+              </div>
+              <div
+                type="text"
+                id="lname"
+                name="lname"
+                placeholder="CASA EDITRICE">
+                CASA EDITRICE
+              </div>
+              <div
+                type="text"
+                id="lname"
+                name="lname"
+                placeholder="CATEGORIA">
+                CATEGORIA
+              </div>
+              <div
+                type="text"
+                id="lname"
+                name="lname"
+                placeholder="TIPOLOGIA">
+                TIPOLOGIA
+              </div>
+              <div
+                type="text"
+                id="lname"
+                name="lname"
+                placeholder="ISBN">
+                ISBN
+              </div>
+              
+            </form>
+          </div>
+        
+          <div class="row pulsanti">
+            <footer class="col-sm-12">
+              <button><a href="#">LETTO</a></button>
+              <button><a href="#">AGGIUNGI</a></button>
+            </footer>
+          </div>
+        </div>
+    </div>
+    </div>
+    </div>
 
   <script  type="text/javascript" src="asset/js/jquery.js"></script>
   <script type="text/javascript" src="asset/js/bootstrap.js"></script>

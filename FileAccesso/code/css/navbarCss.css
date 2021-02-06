@@ -56,3 +56,55 @@
   .wrap {
     width: 30%;
   }
+  /* finestra modale css*/
+  .intestazione header p{
+    text-align: right; 
+  }
+  .intestazione header h1{
+    text-align: center;
+  }
+  .inserimento input{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+  }
+  .inserimento{
+    text-align: center;
+  }
+  .inserimento figure{
+    float: left;
+  }
+  .pulsanti button{
+    border-radius: 15px;
+    font-size: 18px;
+    background-color: orangered;
+    border-color: orangered;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    width: 120px;
+    margin-top: 15px;
+  }
+  .inserimento figure img{
+    height: 245px;
+    margin-top: 10px;
+    float: right;
+  }
+  .inserimento form input{
+    text-align: left;
+  }
+  .background{
+    border-color: orangered 5px solid;
+  }
+  .pulsanti footer button a{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+  }
+  .infodiv{
+    z-index: index 5;
+    border: 2px black solid;
+    width: 1178px;
+    margin:50px;
+  }
