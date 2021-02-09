@@ -56,6 +56,18 @@
   .wrap {
     width: 30%;
   }
+  #pulsantecambiopassword{
+    border-radius: 15px;
+    font-size: 18px;
+    background-color: orangered;
+    border-color: orangered;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    width: 120px;
+    margin-top: 15px;
+  }
   /* finestra modale css*/
   .intestazione header p{
     text-align: right; 
@@ -101,10 +113,4 @@
     text-decoration: none;
     color:white;
     text-align: center;
-  }
-  .infodiv{
-    z-index: index 5;
-    border: 2px black solid;
-    width: 1178px;
-    margin:50px;
   }

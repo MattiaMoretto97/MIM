@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Utente</title>
+    <title>Home Casa Editrice</title>
     <link rel="stylesheet" type="text/css" href="asset/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="asset/css/custom/navbarCss.css">
@@ -30,10 +30,13 @@
         <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="HomeUtente.php" style="color: black;">Home</span></a>
+                    <a class="nav-link" href="homecasaeditrice.php" style="color: black;">Home</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="color: black;">Miei Libri</a>
+                    <a class="nav-link" href="OperazioniCasaEditrice.php" style="color: black;">Operazioni</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Libricasaeditrice.php" style="color: black;">Libri</a>
                 </li>
             </ul>
         </div>

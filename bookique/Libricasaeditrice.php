@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Utente</title>
+    <title>Home Casa Editrice</title>
     <link rel="stylesheet" type="text/css" href="asset/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="asset/css/custom/navbarCss.css">
@@ -30,10 +30,13 @@
         <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="HomeUtente.php" style="color: black;">Home</span></a>
+                    <a class="nav-link" href="homecasaeditrice.php" style="color: black;">Home</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="color: black;">Miei Libri</a>
+                    <a class="nav-link" href="OperazioniCasaEditrice.php" style="color: black;">Operazioni</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Libricasaeditrice.php" style="color: black;">Libri</a>
                 </li>
             </ul>
         </div>
@@ -66,49 +69,13 @@
 
     <!-- Nuove Aggiunte -->
     <div>
-        <h2 style="margin: 50px;">Nuove Aggiunte</h2>
+        <h2 style="margin: 50px;">Libri desiderati dagli utenti</h2>
     </div>
     <div class="card border-dark" style="width: 18rem; margin:50px">
         <img class="card-img-top" src="asset/images/libro.jpg" alt="Card image cap">
         <div class="card-body" style="margin: auto;">
         <h5 class="card-title" style="text-align: center;">Titolo</h5>
         <button type="button" class="btn" href="#" data-toggle="modal" data-target="#dettagliModal">Vedi dettaglio</button>
-    </div>
-    </div>
-
-    <!-- Più visti -->
-    <div>
-        <h2 style="margin: 50px;">Più visti</h2>
-    </div>
-    <div class="card border-dark" style="width: 18rem; margin:50px">
-        <img class="card-img-top" src="asset/images/libro.jpg" alt="Card image cap">
-        <div class="card-body" style="margin: auto;">
-        <h5 class="card-title" style="text-align: center;">Titolo</h5>
-        <button type="button" class="btn" href="#">Vedi dettaglio</button>
-    </div>
-    </div>
-
-    <!-- Più letti -->
-    <div>
-        <h2 style="margin: 50px;">Più letti</h2>
-    </div>
-    <div class="card border-dark" style="width: 18rem; margin:50px">
-        <img class="card-img-top" src="asset/images/libro.jpg" alt="Card image cap">
-        <div class="card-body" style="margin: auto;">
-        <h5 class="card-title" style="text-align: center;">Titolo</h5>
-        <button type="button" class="btn" href="#">Vedi dettaglio</button>
-    </div>
-    </div>
-
-    <!-- Lista libri -->
-    <div>
-        <h2 style="margin: 50px;">Lista libri</h2>
-    </div>
-    <div class="card border-dark" style="width: 18rem; margin:50px">
-        <img class="card-img-top" src="asset/images/libro.jpg" alt="Card image cap">
-        <div class="card-body" style="margin: auto;">
-        <h5 class="card-title" style="text-align: center;">Titolo</h5>
-        <button type="button" class="btn" href="#">Vedi dettaglio</button>
     </div>
     </div>
     
@@ -200,6 +167,13 @@
                 name="lname"
                 placeholder="ISBN">
                 ISBN
+              </div>
+              <div
+                type="text"
+                id="lname"
+                name="lname"
+                placeholder="desiderato">
+                DESIDERATO
               </div>
               
             </form>

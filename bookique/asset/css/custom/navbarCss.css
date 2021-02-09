@@ -66,6 +66,7 @@
   }
     .intestazione h1{
     margin: auto;
+    margin-bottom: 10px;
     
   }
   .inserimento div {
@@ -106,12 +107,24 @@
   .pulsanti footer button a {
     text-decoration: none;
     color: white;
-    text-align:;
+    
   }
   .modal-content{
     z-index: index 5;
     border: 2px black solid;
-    width: 550px;
-    margin-left:10%;
+    width: 600px;
+    margin-left:0%;
     
+  }
+  #pulsantecambiopassword{
+    border-radius: 15px;
+    font-size: 18px;
+    background-color: orangered;
+    border-color: orangered;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    width: 120px;
+    margin-top: 15px;
   }
