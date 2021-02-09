@@ -13,19 +13,14 @@ if (!$conn) {
 }
 
 $db = new PDO($dsn, $username, $password);
-$query = "SELECT COUNT(idLibro)AS volte_letto,Titolo FROM `letti` 
-INNER JOIN libri 
-ON letti.idLibro = libri.id 
-WHERE nascondi=1 
-GROUP BY Titolo 
-ORDER BY volte_letto DESC LIMIT 10";
+$query = "Select * FROM libri WHERE nascondi=1 ORDER BY rand() DESC LIMIT 30";
 
-$utenti = array();
+$libriRandom = array();
 $sth = $db->query($query);
 while( $row = $sth->fetch(PDO::FETCH_ASSOC) ) {
-  $utenti[] = $row; 
+  $libriRandom[] = $row; 
 }
-    echo '<pre>'. json_encode($utenti);
+    return $libriRandom;
 
 mysqli_close($conn);
 

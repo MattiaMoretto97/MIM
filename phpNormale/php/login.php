@@ -51,5 +51,5 @@ $user = mysqli_fetch_assoc($result);
 session_start();
 $_SESSION['user'] = $user;
 
-header("Location: ../home.php");
+header("Location: ../lettore/homeUtente.php");
 ?>
