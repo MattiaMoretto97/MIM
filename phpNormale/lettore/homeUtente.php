@@ -60,7 +60,7 @@ include "../php/libriRandom.php";
                     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                 </svg>
             </a>
-            <a class="btn" style="margin-top:5px; margin-bottom:5px" href="php/logout.php">Logout</a>
+            <a class="btn" style="margin-top:5px; margin-bottom:5px" href="../php/logout.php">Logout</a>
         </div>
     </nav>
 
@@ -233,7 +233,12 @@ include "../php/libriRandom.php";
             <?php }; ?>
         </div>
     </section>
+    <form action="../php/changePassword.php" method="POST">
+            <input type="text" name="oldPassword" placeholder="vecchia password">
+            <input type="text" name="newPassword" placeholder="nuova password">
 
+            <button type="submit" value="submit"></button>
+    </form>
     <!-- Footer -->
     <footer>
         <div class="text-center p-3" style="background-color: black; color:white">
@@ -252,28 +257,25 @@ include "../php/libriRandom.php";
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <form>
-                        <input type="text" id="lname" name="lname" placeholder="password"><br>
-                        <label for="fname"></label>
-                        <input type="text" id="fname" name="fname" placeholder="nuova password"><br>
-                        <label for="lname"></label>
-                        <input type="text" id="fname" name="fname" placeholder="conferma password"><br>
-                        <label for="lname"></label>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">INVIA</button>
-                </div>
+                <form method="POST" action="../php/changePassword.php">
+                    <div class="modal-body">
+                        <input type="text" id="oldPassword" name="oldPassword" placeholder="password"><br>
+                        <input type="text" id="newPassword" name="newPassword" placeholder="nuova password"><br>
+                        <input type="text" id="" name="" placeholder="conferma password"><br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" type="submit" value="submit">INVIA</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
    
 
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
 
 </body>
 

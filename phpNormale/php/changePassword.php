@@ -12,9 +12,13 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$user_id = $_SESSION['id'];
+session_start();
+
+$user_id = $_SESSION['user']['id'];
 $old_password = $_REQUEST['oldPassword'];
 $new_password = $_REQUEST['newPassword'];
+
+print_r($user_id);
 
 $db = new PDO($dsn, $username, $password);
 $query_select = "
@@ -23,9 +27,13 @@ $query_select = "
     WHERE id = '".$user_id."'
 "; 
 
-$result = $db->query($query_select);
+$sth = $db->query($query_select);
 
-if ($result === $old_password) {
+while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
+    $result = $row; 
+  }
+
+if ($result['password'] === $old_password) {
     $db = new PDO($dsn, $username, $password);
     $query_update = "
         UPDATE utenti 
