@@ -56,9 +56,6 @@
         <div class="search">
             <input type="text" class="searchTerm border border-danger" placeholder="Search here...">
             <select class="form-select border border-danger" aria-label="Filtra ricerca">
-            <option selected>Tutto</option>
-            <option value="1">Titolo</option>
-            <option value="2">Autore</option>
             <option value="3">Casa Editrice</option>
             </select>
             <button type="submit" style="background-color: red;" class="searchButton border border-danger">
