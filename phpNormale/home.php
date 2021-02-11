@@ -1,8 +1,9 @@
 <?php
+session_start();
 
-
-$user = $_SESSION['user'];
-print_r($user);
+if (!isset($_SESSION['user'])) {
+  header("Location: ../login.php");
+  die();
 ?>
 
 <!DOCTYPE html>
