@@ -23,7 +23,7 @@ if ($error != null) {
 $nome = $_REQUEST['nome'];
 $cognome = $_REQUEST['cognome'];
 $email = $_REQUEST['email'];
-$password = $_REQUEST['password'];
+$password = password_hash(strval($_REQUEST['password']), PASSWORD_BCRYPT);
 $cf = $_REQUEST['cf'];
 if ($_REQUEST["ruolo"] === "lettore"){
     $ruolo = 2;
