@@ -15,8 +15,16 @@
     <body>
         <div class="d-flex  bd-highlight">
             <div class="p-2 flex-fill bd-highlight">
-                    <button class="bottone-superiore-dx">REGISTRATI</button>
-                    <button class="bottone-superiore-sx">LOGIN</button><br/>
+                <a href="registration.php">
+                    <button class="bottone-superiore-dx">
+                            REGISTRAZIONE
+                    </button>
+                </a>
+                <a href="login.php">
+                    <button class="bottone-superiore-sx">
+                            LOGIN
+                    </button>
+                </a>
                     <section class="paragrafo">
                         <h1>Log In</h1>
                         <p>bentornato <br/> Per favore, accedi al tuo account</p> <br/>
@@ -33,8 +41,10 @@
                         <label for="squaredFour">Ricordami  <a href="#">Password dimenticata?</a></label> 
                         </section>
                     </form> -->
-                    <div>
+                    <div class="container">
+                    <div class=" col-sm-12 text-center">
                         <button class="bottone-inferiore" type="submit" value="submit">ACCEDI</button>
+                    </div>
                     </div>
                     </form>
             </div>
