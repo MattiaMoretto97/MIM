@@ -6,10 +6,10 @@ if (!isset($_SESSION['user'])) {
     die();
 }
 
-include "php/nuoveAggiunte.php";
-include "php/PiuLetti.php";
-include "php/PiuRichiesti.php";
-include "php/libriRandom.php";
+include "../php/nuoveAggiunte.php";
+include "../php/PiuLetti.php";
+include "../php/PiuRichiesti.php";
+include "../php/libriRandom.php";
 // echo '<pre>';
 // print_r($Libri);
 ?>
@@ -22,11 +22,11 @@ include "php/libriRandom.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Utente</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/custom/navbarCss.css">
-    <link rel="stylesheet" href="css/custom/searchBar.css">
-    <link rel="stylesheet" href="css/custom/scrollbarX.css">
+    <link rel="stylesheet" href="../css/custom/navbarCss.css">
+    <link rel="stylesheet" href="../css/custom/searchBar.css">
+    <link rel="stylesheet" href="../css/custom/scrollbarX.css">
 </head>
 
 <body>
@@ -36,7 +36,7 @@ include "php/libriRandom.php";
         <nav class="navbar">
             <div class="d-flex justify-content-start" id="NavBarLogo">
                 <a class="navbar-brand" href="#">
-                    <img src="img/logo.png" width="150" height="50" class="d-inline-block align-top" alt="">
+                    <img src="../img/logo.png" width="150" height="50" class="d-inline-block align-top" alt="">
                 </a>
             </div>
         </nav>
@@ -105,7 +105,7 @@ include "php/libriRandom.php";
                 <div class="my-1 px-1 w-full md:w-1/5 lg:my-4 lg:px-4 lg:w-1/5 sm:1/ inline-block">
                     <article class="overflow-hidden rounded-lg shadow-lg">
                         <a href="#">
-                            <img alt="Placeholder" class="block h-auto w-full" src="img/libro.jpg">
+                            <img alt="Placeholder" class="block h-auto w-full" src="../img/libro.jpg">
                         </a>
 
                         <header class="text-center">
@@ -140,7 +140,7 @@ include "php/libriRandom.php";
                 <div class="my-1 px-1 w-full md:w-1/5 lg:my-4 lg:px-4 lg:w-1/5 sm:1/ inline-block">
                     <article class="overflow-hidden rounded-lg shadow-lg">
                         <a href="#">
-                            <img alt="Placeholder" class="block h-auto w-full" src="img/libro.jpg">
+                            <img alt="Placeholder" class="block h-auto w-full" src="../img/libro.jpg">
                         </a>
 
                         <header class="text-center">
@@ -175,7 +175,7 @@ include "php/libriRandom.php";
                 <div class="my-1 px-1 w-full md:w-1/5 lg:my-4 lg:px-4 lg:w-1/5 sm:1/ inline-block">
                     <article class="overflow-hidden rounded-lg shadow-lg">
                         <a href="#">
-                            <img alt="Placeholder" class="block h-auto w-full" src="img/libro.jpg">
+                            <img alt="Placeholder" class="block h-auto w-full" src="../img/libro.jpg">
                         </a>
 
                         <header class="text-center">
@@ -210,7 +210,7 @@ include "php/libriRandom.php";
                 <div class="my-1 px-1 w-full md:w-1/5 lg:my-4 lg:px-4 lg:w-1/5 sm:1/ inline-block">
                     <article class="overflow-hidden rounded-lg shadow-lg">
                         <a href="#">
-                            <img alt="Placeholder" class="block h-auto w-full" src="img/libro.jpg">
+                            <img alt="Placeholder" class="block h-auto w-full" src="../img/libro.jpg">
                         </a>
 
                         <header class="text-center">

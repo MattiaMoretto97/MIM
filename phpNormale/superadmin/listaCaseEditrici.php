@@ -5,9 +5,7 @@ if (!isset($_SESSION['user'])) {
     header("Location: ../login.php");
     die();
 }
-include "../php/listaUtenti.php"
-// echo '<pre>';
-// print_r($Libri);
+include "../php/listaCaseEdistrici.php";
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +68,7 @@ include "../php/listaUtenti.php"
     </div>
     <div class="flex justify-center items-center">
 
-        <h1 class="pb-14 pt-2 uppercase font-bold">Lista Lettori</h1>
+        <h1 class="pb-14 pt-2 uppercase font-bold">Lista Case Editrici</h1>
     </div>
     <table class="min-w-full leading-normal mb-24">
         <thead>
@@ -90,30 +88,30 @@ include "../php/listaUtenti.php"
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($lettori as $index => $lettore) { ?>
+            <?php foreach ($caseEditrici as $casaEditrice) { ?>
                 <tr>
                     <td class="px-5 pb-2 pt-4 border-b border-black bg-white text-s">
                         <div class="flex items-center">
                             <div class="ml-3">
                                 <p class="text-gray-900 whitespace-no-wrap">
-                                    <?= $lettore['cognome'] ?>
+                                    <?= $casaEditrice['cognome'] ?>
                                 </p>
                             </div>
                         </div>
                     </td>
                     <td class="px-5 pb-2 pt-4 border-b border-black bg-white text-s">
                         <p class="text-gray-900 whitespace-no-wrap">
-                            <?= $lettore['nome'] ?>
+                            <?= $casaEditrice['nome'] ?>
                         </p>
                     </td>
                     <td class="px-5 pb-2 pt-4 border-b border-black bg-white text-s">
                         <p class="text-gray-900 whitespace-no-wrap">
-                            <?= $lettore['email'] ?>
+                            <?= $casaEditrice['email'] ?>
                         </p>
                     </td>
                     <td class="px-5 pb-3 pt-2 border-b border-black bg-white text-s text-center">
-                        <span class="relative inline-block px-3 py-1 font-semibold leading-tight">
-                            <a><a href="dettaglioUtente.php?id=<?=$lettore['id']?>"><button class="border-2 border-black font-bold py-2 px-4 rounded" type="submit">👁️</button></a>
+                        <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                            <button class="border-2 border-black text-white font-bold py-2 px-4 rounded">👁️</button>
                         </span>
                     </td>
                 </tr>
@@ -129,6 +127,7 @@ include "../php/listaUtenti.php"
             <a class="text-white">Bookique</a>
         </div>
     </footer>
+
 
 </body>
 
