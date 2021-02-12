@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['user'])) {
-    header("Location: ../login.php");
+if (!isset($_SESSION['superadmin'])) {
+    header("Location: ../Unauthorized.html");
     die();
 }
-include "../php/listaCaseEdistrici.php";
+include "../php/listaCaseEditrici.php";
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +57,7 @@ include "../php/listaCaseEdistrici.php";
                     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                 </svg>
             </a>
-            <a class="btn" style="margin-top:5px; margin-bottom:5px" href="php/logout.php">Logout</a>
+            <a class="btn" style="margin-top:5px; margin-bottom:5px" href="../php/logout.php">Logout</a>
         </div>
     </nav>
 
@@ -74,10 +74,7 @@ include "../php/listaCaseEdistrici.php";
         <thead>
             <tr>
                 <th class="px-5 py-3 border-2 border-black bg-gray-100 text-left text-s font-semibold text-gray-600 uppercase tracking-wider">
-                    Cognome
-                </th>
-                <th class="px-5 py-3 border-2 border-black bg-gray-100 text-left text-s font-semibold text-gray-600 uppercase tracking-wider">
-                    Nome
+                    Casa editrice
                 </th>
                 <th class="px-5 py-3 border-2 border-black bg-gray-100 text-left text-s font-semibold text-gray-600 uppercase tracking-wider">
                     email
@@ -101,17 +98,12 @@ include "../php/listaCaseEdistrici.php";
                     </td>
                     <td class="px-5 pb-2 pt-4 border-b border-black bg-white text-s">
                         <p class="text-gray-900 whitespace-no-wrap">
-                            <?= $casaEditrice['nome'] ?>
-                        </p>
-                    </td>
-                    <td class="px-5 pb-2 pt-4 border-b border-black bg-white text-s">
-                        <p class="text-gray-900 whitespace-no-wrap">
                             <?= $casaEditrice['email'] ?>
                         </p>
                     </td>
                     <td class="px-5 pb-3 pt-2 border-b border-black bg-white text-s text-center">
                         <span class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                            <button class="border-2 border-black text-white font-bold py-2 px-4 rounded">👁️</button>
+                        <a href="dettaglioCasaEditrice.php?id=<?=$casaEditrice['id']?>"><button class="border-2 border-black text-white font-bold py-2 px-4 rounded">👁️</button></a>
                         </span>
                     </td>
                 </tr>

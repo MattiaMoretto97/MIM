@@ -15,8 +15,8 @@
     <body>
         <div class="d-flex  bd-highlight">
             <div class="p-2 flex-fill bd-highlight">
-                    <button class="bottone-superiore-dx">REGISTRATI</button>
-                    <button class="bottone-superiore-sx">LOGIN</button><br/>
+                    <a href="registration.php"><button class="bottone-superiore-dx">REGISTRATI</button></a>
+                    <a href="login.php"><button class="bottone-superiore-sx">LOGIN</button><br/></a>
                     <section class="paragrafo">
                         <h1>Log In</h1>
                         <p>bentornato <br/> Per favore, accedi al tuo account</p> <br/>

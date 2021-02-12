@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['user'])) {
-    header("Location: InCaricamento.html");
+    header("Location: ../Redirect.html");
     die();
 }
 
@@ -60,7 +60,7 @@ include "../php/libriRandom.php";
                     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                 </svg>
             </a>
-            <a class="btn" style="margin-top:5px; margin-bottom:5px" href="php/logout.php">Logout</a>
+            <a class="btn" style="margin-top:5px; margin-bottom:5px" href="../php/logout.php">Logout</a>
         </div>
     </nav>
 
@@ -254,11 +254,11 @@ include "../php/libriRandom.php";
                 </div>
                 <div class="modal-body">
                     <form>
-                        <input type="text" id="lname" name="lname" placeholder="password"><br>
+                        <input type="text" id="oldPassword" name="lname" placeholder="password"><br>
                         <label for="fname"></label>
-                        <input type="text" id="fname" name="fname" placeholder="nuova password"><br>
+                        <input type="text" id="newPassword" name="fname" placeholder="nuova password"><br>
                         <label for="lname"></label>
-                        <input type="text" id="fname" name="fname" placeholder="conferma password"><br>
+                        <input type="text" id="confirmPassword" name="fname" placeholder="conferma password"><br>
                         <label for="lname"></label>
                     </form>
                 </div>
@@ -272,8 +272,8 @@ include "../php/libriRandom.php";
 
    
 
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
 
 </body>
 

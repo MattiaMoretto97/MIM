@@ -5,8 +5,21 @@ if (!isset($_SESSION['superadmin'])) {
   header("Location: ../Unauthorized.html");
   die();
 }
-// echo '<pre>';
-// print_r($Libri);
+include "../php/connection.php";
+
+$db = new PDO($dsn, $username, $password);
+$id = (int) $_GET['id'];
+
+$query = "Select * FROM utenti WHERE id = $id";
+
+$utente = array();
+$sth = $db->query($query);
+while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
+  $utente[] = $row;
+}
+
+
+mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
@@ -62,42 +75,38 @@ if (!isset($_SESSION['superadmin'])) {
     </div>
   </nav>
 
-  <!-- Card -->
+  <div class="flex justify-start items-left pt-2 ml-2">
+    <a href="listaCasaEditrice.php"><button class="border-2 border-black text-black font-bold py-2 px-4 rounded">Indietro</button></a>
+  </div>
 
-  <main class="py-20">
-  <div class="px-14">
-    <div class="block md:flex justify-center md:-mx-2">
-      <div class="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0">
-        <div class="bg-white rounded-lg overflow-hidden shadow relative">
-          <a href="listaLettori.php">
-          <img class="h-56 w-full object-contain object-center" src="../img/iconaLettore.png" alt="">
-          </a>
-          <div class="p-4 h-auto md:h-40 lg:h-48">
-            <a class="block text-black hover:no-underline hover:text-black font-semibold mb-2 text-lg md:text-base lg:text-lg text-center">
-              Lettori
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0">
-        <div class="bg-white rounded-lg overflow-hidden shadow relative">
-          <a href="listaCaseEditrici.php">
-          <img class="h-56 w-full object-contain object-center" src="../img/iconaCasaEditrice.png" alt="">
-          </a>
-          <div class="p-4 h-auto md:h-40 lg:h-48">
-            <a class="block text-black hover:no-underline hover:text-black font-semibold mb-2 text-lg md:text-base lg:text-lg text-center">
-              Case editrici
-            </a>
-          </div>
+  <div class="pt-4 h-screen  px-2">
+    <div class="max-w-md mx-auto bg-white rounded-lg overflow-hidden md:max-w-md border-2 border-black">
+      <div class="md:flex">
+        <div class="w-full p-3 px-6 py-10">
+          <div class="text-center"> <span class="text-xl text-black">Dettaglio casa editrice</span> </div>
+          <form method="POST" action="../php/modificaCasaEditrice.php?id=<?= $id ?>">
+            <div class="mt-3 relative"> <span class="absolute p-1 bottom-8 ml-2 bg-white text-red-500">Casa Editrice</span> <input type="text" id="cognome" name="cognome" value="<?php print_r($utente['0']['cognome']); ?>" class="h-12 px-2 w-full border-2 border-black rounded focus:outline-none focus:border-red-600 text-center"> </div>
+            <div class="mt-4 relative"> <span class="absolute p-1 bottom-8 ml-2 bg-white text-red-500 ">Email</span> <input type="text" id="email" name="email" value="<?php print_r($utente['0']['email']); ?>" class="h-12 px-2 w-full border-2 border-black rounded focus:outline-none focus:border-red-600 text-center"> </div>
+            <div class="mt-4 relative"> <span class="absolute p-1 bottom-8 ml-2 bg-white text-red-500">Password</span> <input type="text" id="password" name="password" value="<?php print_r($utente['0']['password']); ?>" class="h-12 px-2 w-full border-2 border-black rounded focus:outline-none focus:border-red-600 text-center"> </div>
+            <div class="flex items-center justify-between mt-6">
+              <a href="../php/deleteCasaEditrice.php?id=<?= $id ?>">
+                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                  Delete
+                </button>
+              </a>
+                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" value="submit">
+                  Update
+                </button>
+          </form>
         </div>
       </div>
     </div>
   </div>
-</main>
+  </div>
 
   <!-- Footer -->
   <footer>
-    <div class="text-center p-3 fixed-bottom" style="background-color: black; color:white; margin-bottom:0px">
+    <div class="text-center p-3 fixed-bottom" style="background-color: black; color:white; margin-bottom:0px;">
       © 2021 Copyright:
       <a class="text-white">Bookique</a>
     </div>
