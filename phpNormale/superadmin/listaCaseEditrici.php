@@ -5,7 +5,7 @@ if (!isset($_SESSION['superadmin'])) {
     header("Location: ../Unauthorized.html");
     die();
 }
-include "../php/listaCaseEditrici.php";
+include "../php/listaCaseEdistrici.php";
 ?>
 
 <!DOCTYPE html>

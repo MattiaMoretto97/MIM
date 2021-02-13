@@ -22,10 +22,18 @@ if ($error != null) {
 
 $id = (int) $_GET['id'];
 
+$queryInsertUtente = "
+DELETE FROM letti WHERE idUtente = $id;";
+
+$result = mysqli_query($conn, $queryInsertUtente);
 
 $queryInsertUtente = "
-DELETE FROM utenti WHERE id = $id;
-";
+DELETE FROM desiderati WHERE idUtente = $id;";
+
+$result = mysqli_query($conn, $queryInsertUtente);
+
+$queryInsertUtente = "
+DELETE FROM utenti WHERE id = $id;";
 
 $result = mysqli_query($conn, $queryInsertUtente);
 

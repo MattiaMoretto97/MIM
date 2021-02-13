@@ -20,21 +20,17 @@ if ($error != null) {
     die();
 }
 
+$titolo = $_REQUEST['titolo'];
+$autore = $_REQUEST['autore'];
+$categoria = $_REQUEST['categoria'];
+$tipologia = $_REQUEST['tipologia'];
+$isbn = $_REQUEST['isbn'];
+$casaEditrice = $_REQUEST['casaEditrice'];
 $id = (int) $_GET['id'];
 
-$queryInsertUtente = "
-DELETE FROM letti WHERE idUtente = $id;";
-
-$result = mysqli_query($conn, $queryInsertUtente);
 
 $queryInsertUtente = "
-DELETE FROM desiderati WHERE idUtente = $id;";
-
-$result = mysqli_query($conn, $queryInsertUtente);
-
-
-$queryInsertUtente = "
-DELETE FROM utenti WHERE id = $id;
+UPDATE libri SET titolo = '$titolo', autore='$autore', categoria='$categoria', tipologia='$tipologia', isbn='$isbn', casaEditrice = '$casaEditrice' WHERE id = $id;
 ";
 
 $result = mysqli_query($conn, $queryInsertUtente);
@@ -46,5 +42,5 @@ echo $error . "<br>";
 die();
 }
 
-header("Location: ../superadmin/listaCaseEditrici.php");
+header("Location: ../superadmin/listaLibri.php");
 ?>

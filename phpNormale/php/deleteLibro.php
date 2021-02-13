@@ -23,19 +23,17 @@ if ($error != null) {
 $id = (int) $_GET['id'];
 
 $queryInsertUtente = "
-DELETE FROM letti WHERE idUtente = $id;";
+DELETE FROM letti WHERE idLibro = $id;";
 
 $result = mysqli_query($conn, $queryInsertUtente);
 
 $queryInsertUtente = "
-DELETE FROM desiderati WHERE idUtente = $id;";
+DELETE FROM desiderati WHERE idLibro = $id;";
 
 $result = mysqli_query($conn, $queryInsertUtente);
 
-
 $queryInsertUtente = "
-DELETE FROM utenti WHERE id = $id;
-";
+DELETE FROM libri WHERE id = $id;";
 
 $result = mysqli_query($conn, $queryInsertUtente);
 
@@ -46,5 +44,5 @@ echo $error . "<br>";
 die();
 }
 
-header("Location: ../superadmin/listaCaseEditrici.php");
+header("Location: ../superadmin/listaLibri.php");
 ?>

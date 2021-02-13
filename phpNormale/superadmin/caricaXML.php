@@ -62,38 +62,7 @@ if (!isset($_SESSION['superadmin'])) {
     </div>
   </nav>
 
-  <!-- Card -->
 
-  <main class="py-20">
-  <div class="px-14">
-    <div class="block md:flex justify-center md:-mx-2">
-      <div class="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0">
-        <div class="bg-white rounded-lg overflow-hidden shadow relative">
-          <a href="listaLettori.php">
-          <img class="h-56 w-full object-contain object-center" src="../img/iconaLettore.png" alt="">
-          </a>
-          <div class="p-4 h-auto md:h-40 lg:h-48">
-            <a class="block text-black hover:no-underline hover:text-black font-semibold mb-2 text-lg md:text-base lg:text-lg text-center">
-              Lettori
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0">
-        <div class="bg-white rounded-lg overflow-hidden shadow relative">
-          <a href="listaCaseEditrici.php">
-          <img class="h-56 w-full object-contain object-center" src="../img/iconaCasaEditrice.png" alt="">
-          </a>
-          <div class="p-4 h-auto md:h-40 lg:h-48">
-            <a class="block text-black hover:no-underline hover:text-black font-semibold mb-2 text-lg md:text-base lg:text-lg text-center">
-              Case editrici
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
 
   <!-- Footer -->
   <footer>
