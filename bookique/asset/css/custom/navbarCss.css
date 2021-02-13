@@ -128,3 +128,8 @@
     width: 120px;
     margin-top: 15px;
   }
+  .pulsanti-inserimento input{
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 15px;
+  }

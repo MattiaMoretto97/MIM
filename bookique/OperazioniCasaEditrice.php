@@ -69,17 +69,40 @@
         <h2 style="margin: 50px;">Aggiungi, Modifica o Elimina</h2>
     </div>
     <div style="margin: 50px;">
-    <form action=".php" method="post" enctype="multipart/form-data">
-		  <strong>Aggiungi un libro qui:</strong>
-      <input type="file" style="margin: 10px;" name="fileToUpload" id="fileToUpload"><br>
-    </form>
+		<strong>Aggiungi un libro qui:</strong>
+        <form class="pulsanti-inserimento" action="modifica.php" method="post" enctype="multipart/form-data">
+            <label for="fname"></label>
+            <input type="text" id="fname" name="fname" placeholder="id">
+            <label for="lname"></label>
+            <input type="text" id="lname" name="lname" placeholder="titolo">
+            <label for="lname"></label>
+            <input type="text" id="sname" name="sname" placeholder="autore">
+            <label for="lname"></label>
+            <input type="text" id="rname" name="rname" placeholder="categoria"> <br>
+            <label for="lname"></label>
+            <input type="text" id="tname" name="tname" placeholder="tipologia">
+            <label for="lname"></label>
+            <input type="text" id="yname" name="yname" placeholder="isbn">
+            <label for="lname"></label>
+            <input type="text" id="pname" name="pname" placeholder="casa editrice">
+            <label for="lname"></label>
+            <input type="text" id="bname" name="bname" placeholder="nascondi">   
+        </form> 
+    </div>                   
+    <div class="search" style="margin: 50px; width: 250px;">
+    <strong>Cerca il libro da eliminare:</strong> <br>
+            <input type="text" class="searchTerm border border-danger" placeholder="Search here...">
+            <button type="submit" style="background-color: red;" class="searchButton border border-danger">
+            <i class="fa fa-search"></i>
+            </button>
     </div>
+    
 
     <!-- visibile o nascosto un libro -->
     <div>
         <h2 style="margin: 50px;">Scegli di rendere visibile o nascosto un libro</h2>
     </div>
-    <div  style="width: 200px; margin:50px">
+    <div  style="width: 250px; margin:50px">
     <strong>Cerca il tuo libro:</strong><br>
     <div class="search">
             <input type="text" class="searchTerm border border-danger" placeholder="Search here...">
@@ -90,6 +113,7 @@
       <form action=".php" style="margin: 10px;">
 		    <input type="checkbox" id="opzione1" name="opzione1" value="nascondi">
 		    <label for="opzione1"> Nascondi questo libro</label><br>
+        </form>
     </div>
      <!-- Footer -->
     <footer>
