@@ -70,23 +70,20 @@
     </div>
     <div style="margin: 50px;">
 		<strong>Aggiungi un libro qui:</strong>
-        <form class="pulsanti-inserimento" action="modifica.php" method="post" enctype="multipart/form-data">
-            <label for="fname"></label>
-            <input type="text" id="fname" name="fname" placeholder="id">
+        <form class="pulsanti-inserimento" action="../php/aggiungiLibri.php" method="post" enctype="multipart/form-data">
             <label for="lname"></label>
-            <input type="text" id="lname" name="lname" placeholder="titolo">
+            <input type="text" id="titolo" name="titolo" placeholder="titolo">
             <label for="lname"></label>
-            <input type="text" id="sname" name="sname" placeholder="autore">
+            <input type="text" id="autore" name="autore" placeholder="autore">
             <label for="lname"></label>
-            <input type="text" id="rname" name="rname" placeholder="categoria"> <br>
+            <input type="text" id="categoria" name="categoria" placeholder="categoria"> <br>
             <label for="lname"></label>
-            <input type="text" id="tname" name="tname" placeholder="tipologia">
+            <input type="text" id="tipologia" name="tipologia" placeholder="tipologia">
             <label for="lname"></label>
-            <input type="text" id="yname" name="yname" placeholder="isbn">
+            <input type="text" id="isbn" name="isbn" placeholder="isbn">
             <label for="lname"></label>
-            <input type="text" id="pname" name="pname" placeholder="casa editrice">
-            <label for="lname"></label>
-            <input type="text" id="bname" name="bname" placeholder="nascondi">   
+            <input type="text" id="casaeditrice" name="casaeditrice" placeholder="casa editrice">
+            <button type="submit">INVIA</button>  
         </form> 
     </div>                   
     <div class="search" style="margin: 50px; width: 250px;">

@@ -2,7 +2,7 @@
 $servername = "localhost";
 $dsn = 'mysql:dbname=bookique;host=127.0.0.1';
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "bookique";
 
 // Create connection
