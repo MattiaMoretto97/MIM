@@ -7,9 +7,9 @@ if (!isset($_SESSION['user'])) {
 }
 
 include "../php/nuoveAggiunte.php";
-include "../php/PiuLetti.php";
-include "../php/PiuRichiesti.php";
-include "../php/libriRandom.php";
+#include "../php/PiuLetti.php";
+#include "../php/PiuRichiesti.php";
+#include "../php/libriRandom.php";
 // echo '<pre>';
 // print_r($Libri);
 ?>
@@ -71,7 +71,7 @@ include "../php/libriRandom.php";
         >
           <input
             class="w-full  py-3 px-10 rounded-3xl md:pl-40 pl-28 border-2 border-red-600 focus:outline-none"
-            placeholder="Scopri nuovi portfolio!"
+            placeholder="Scopri nuovi libri!"
             type="text"
             id="search"
           />

@@ -15,7 +15,7 @@ $autore = $_REQUEST['autore'];
 $categoria = $_REQUEST['categoria'];
 $tipologia = $_REQUEST['tipologia'];
 $isbn = $_REQUEST['isbn'];
-$casaEitrice = $_REQUEST['casaeditrice'];
+$casaEditrice = $_REQUEST['casaEditrice'];
 
 $queryInsertUtente = "
 INSERT INTO libri (
@@ -29,12 +29,15 @@ INSERT INTO libri (
 ) VALUES (
     '$titolo',
     '$autore',
+    '$categoria',
     '$tipologia',
     '$isbn',
     '$casaEditrice',
     '1'
 );
 ";
+
+echo $queryInsertUtente . "<br>";
 
 $result = mysqli_query($conn, $queryInsertUtente);
 
@@ -45,5 +48,5 @@ echo $error . "<br>";
 die();
 }
 
-header("Location:../phpNormale/casaEditrice/homecasaeditrice.php");
+header("Location:../casaEditrice/homecasaeditrice.php");
 ?>

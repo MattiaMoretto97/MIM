@@ -5,8 +5,13 @@ $username = "root";
 $password = "root";
 $dbname = "bookique";
 
+
+
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+
+
 // Check connection
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
@@ -20,7 +25,6 @@ $sth = $db->query($query);
 while( $row = $sth->fetch(PDO::FETCH_ASSOC) ) {
   $libriNuovi[] = $row; 
 }
-    return $libriNuovi;
 
 mysqli_close($conn);
 

@@ -8,10 +8,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Casa Editrice</title>
-    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap/bootstrap.min.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="asset/css/custom/navbarCss.css">
-    <link rel="stylesheet" href="asset/css/custom/searchBar.css">
+    <link rel="stylesheet" href="../css/custom/navbarCss.css">
+    <link rel="stylesheet" href="../css/custom/searchBar.css">
+    <link rel="stylesheet" href="../css/custom/scrollbarX.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -20,7 +22,7 @@
         <nav class="navbar">
             <div class="d-flex justify-content-start" id="NavBarLogo">
             <a class="navbar-brand" href="#">
-                <img src="asset/images/logo.png" width="150" height="50" class="d-inline-block align-top" alt="">
+                <img src="../img/logo.png" width="150" height="50" class="d-inline-block align-top" alt="">
             </a>
             </div>
         </nav>
@@ -69,7 +71,7 @@
         <h2 style="margin: 50px;">Nuove Aggiunte</h2>
     </div>
     <div class="card border-dark" style="width: 18rem; margin:50px">
-        <img class="card-img-top" src="asset/images/libro.jpg" alt="Card image cap">
+        <img class="card-img-top" src="../img/libro.jpg" alt="Card image cap">
         <div class="card-body" style="margin: auto;">
         <h5 class="card-title" style="text-align: center;">Titolo</h5>
         <button type="button" class="btn" href="#" data-toggle="modal" data-target="#dettagliModal">Vedi dettaglio</button>
@@ -81,7 +83,7 @@
         <h2 style="margin: 50px;">Più visti</h2>
     </div>
     <div class="card border-dark" style="width: 18rem; margin:50px">
-        <img class="card-img-top" src="asset/images/libro.jpg" alt="Card image cap">
+        <img class="card-img-top" src="../img/libro.jpg" alt="Card image cap">
         <div class="card-body" style="margin: auto;">
         <h5 class="card-title" style="text-align: center;">Titolo</h5>
         <button type="button" class="btn" href="#">Vedi dettaglio</button>
@@ -93,7 +95,7 @@
         <h2 style="margin: 50px;">Più letti</h2>
     </div>
     <div class="card border-dark" style="width: 18rem; margin:50px">
-        <img class="card-img-top" src="asset/images/libro.jpg" alt="Card image cap">
+        <img class="card-img-top" src="../img/libro.jpg" alt="Card image cap">
         <div class="card-body" style="margin: auto;">
         <h5 class="card-title" style="text-align: center;">Titolo</h5>
         <button type="button" class="btn" href="#">Vedi dettaglio</button>
@@ -105,7 +107,7 @@
         <h2 style="margin: 50px;">Lista libri</h2>
     </div>
     <div class="card border-dark" style="width: 18rem; margin:50px">
-        <img class="card-img-top" src="asset/images/libro.jpg" alt="Card image cap">
+        <img class="card-img-top" src="../img/libro.jpg" alt="Card image cap">
         <div class="card-body" style="margin: auto;">
         <h5 class="card-title" style="text-align: center;">Titolo</h5>
         <button type="button" class="btn" href="#">Vedi dettaglio</button>

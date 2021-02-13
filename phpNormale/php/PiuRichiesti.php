@@ -25,7 +25,7 @@ $sth = $db->query($query);
 while( $row = $sth->fetch(PDO::FETCH_ASSOC) ) {
   $libriRichiesti[] = $row; 
 }
-    return $libriRichiesti;
+  
 
 mysqli_close($conn);
 

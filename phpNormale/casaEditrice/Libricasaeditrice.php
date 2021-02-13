@@ -1,5 +1,6 @@
 <?php
 
+ include "../php/listalibricasaeditrice.php";
 ?>
 
 <!DOCTYPE html>
@@ -8,10 +9,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Casa Editrice</title>
-    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap/bootstrap.min.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="asset/css/custom/navbarCss.css">
-    <link rel="stylesheet" href="asset/css/custom/searchBar.css">
+    <link rel="stylesheet" href="../css/custom/navbarCss.css">
+    <link rel="stylesheet" href="../css/custom/searchBar.css">
+    <link rel="stylesheet" href="../css/custom/scrollbarX.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -20,7 +23,7 @@
         <nav class="navbar">
             <div class="d-flex justify-content-start" id="NavBarLogo">
             <a class="navbar-brand" href="#">
-                <img src="asset/images/logo.png" width="150" height="50" class="d-inline-block align-top" alt="">
+                <img src="../img/logo.png" width="150" height="50" class="d-inline-block align-top" alt="">
             </a>
             </div>
         </nav>
@@ -63,19 +66,50 @@
             </button>
         </div>
     </div>
+    <!-- lista libri -->
+    <div>
+        <h2 style="margin:50px;">Nuove aggiunte</h2>
+    </div>
+    <section class="content mx-5">
 
+        <div class="scrolling-wrapper">
+            <?php foreach ($libriNuovi as $libro) { ?>
+                <div class="my-1 px-1 w-full md:w-1/5 lg:my-4 lg:px-4 lg:w-1/5 sm:1/ inline-block">
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="../img/libro.jpg">
+                        </a>
+
+                        <header class="text-center">
+                            <h1 class="text-sm">
+                                <a class="no-underline text-black content-center"  href="#">
+                                    <?= $libro["titolo"] ?>
+                                </a>
+                            </h1>
+                            <h1 class="text-sm">
+                                <a class="no-underline hover:no-underline hover:text-black text-black content-center"  href="#">
+                                    <?= $libro["casaEditrice"] ?>
+                                </a>
+                            </h1>
+                            <button class="bg-red-800 hover:bg-red-900 text-white font-bold py-2 px-4 mb-4 mt-2 rounded">
+                                Vedi dettaglio
+                            </button>
+                        </header>
+                    </article>
+                </div>
+            <?php }; ?>
+        </div>
     <!-- Nuove Aggiunte -->
     <div>
-        <h2 style="margin: 50px;">Libri desiderati dagli utenti</h2>
+        <h2 style="margin: 50px;">Libri desiderati dagli utenti:</h2>
     </div>
     <div class="card border-dark" style="width: 18rem; margin:50px">
-        <img class="card-img-top" src="asset/images/libro.jpg" alt="Card image cap">
+        <img class="card-img-top" src="../img/libro.jpg" alt="Card image cap">
         <div class="card-body" style="margin: auto;">
         <h5 class="card-title" style="text-align: center;">Titolo</h5>
         <button type="button" class="btn" href="#" data-toggle="modal" data-target="#dettagliModal">Vedi dettaglio</button>
     </div>
     </div>
-    
      <!-- Footer -->
     <footer>
         <div class="text-center p-3" style="background-color: black; color:white">
