@@ -18,7 +18,6 @@ $user_id = $_SESSION['user']['id'];
 $old_password = $_REQUEST['oldPassword'];
 $new_password = $_REQUEST['newPassword'];
 
-print_r($user_id);
 
 $db = new PDO($dsn, $username, $password);
 $query_select = "
@@ -45,5 +44,7 @@ if ($result['password'] === $old_password) {
 }
 
 mysqli_close($conn);
+
+header("Location: ../lettore/homeUtente.php");
 
 ?>

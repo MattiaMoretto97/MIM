@@ -49,7 +49,7 @@ include "../php/libriRandom.php";
                     <a class="nav-link" href="HomeUtente.php" style="color: red ;"><u>Home</u></span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="color: black;">Miei Libri</a>
+                    <a class="nav-link" href="listOptions.php" style="color: black;">Le Mie Liste</a>
                 </li>
             </ul>
         </div>
@@ -237,7 +237,7 @@ include "../php/libriRandom.php";
             <input type="text" name="oldPassword" placeholder="vecchia password">
             <input type="text" name="newPassword" placeholder="nuova password">
 
-            <button type="submit" value="submit"></button>
+            <button type="submit" value="submit">INVIA</button>
     </form>
     <!-- Footer -->
     <footer>
@@ -257,7 +257,7 @@ include "../php/libriRandom.php";
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form method="POST" action="../php/changePassword.php">
+                <form method="POST" action="../php/changePassword.php" role="form">
                     <div class="modal-body">
                         <input type="text" id="oldPassword" name="oldPassword" placeholder="password"><br>
                         <input type="text" id="newPassword" name="newPassword" placeholder="nuova password"><br>
