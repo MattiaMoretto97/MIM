@@ -13,14 +13,14 @@ if (!$conn) {
 }
 
 $db = new PDO($dsn, $username, $password);
-$query = "Select * FROM libri WHERE nascondi=1 ORDER BY id DESC LIMIT 10";
+$query = "Select * FROM utenti WHERE idRuolo = 2 ORDER BY cognome ASC";
 
-$libriNuovi = array();
+$lettori = array();
 $sth = $db->query($query);
 while( $row = $sth->fetch(PDO::FETCH_ASSOC) ) {
-  $libriNuovi[] = $row; 
+  $lettori[] = $row; 
 }
-    return $libriNuovi;
+    return $lettori;
 
 mysqli_close($conn);
 

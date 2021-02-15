@@ -13,14 +13,19 @@ if (!$conn) {
 }
 
 $db = new PDO($dsn, $username, $password);
-$query = "Select * FROM libri WHERE nascondi=1 ORDER BY id DESC LIMIT 10";
+$query = "SELECT *, COUNT(idLibro)AS volte_letto,Titolo FROM `letti` 
+INNER JOIN libri 
+ON letti.idLibro = libri.id 
+WHERE nascondi=1 
+GROUP BY Titolo 
+ORDER BY volte_letto DESC LIMIT 10";
 
-$libriNuovi = array();
+$libriLetti = array();
 $sth = $db->query($query);
 while( $row = $sth->fetch(PDO::FETCH_ASSOC) ) {
-  $libriNuovi[] = $row; 
+  $libriLetti[] = $row; 
 }
-    return $libriNuovi;
+    return $libriLetti;
 
 mysqli_close($conn);
 

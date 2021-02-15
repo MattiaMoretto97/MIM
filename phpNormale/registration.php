@@ -14,8 +14,8 @@
     
         <div class="d-flex  bd-highlight">
             <div class="p-2 flex-fill bd-highlight">
-                    <button class="bottone-superiore-dx">registrati</button>
-                    <button class="bottone-superiore-sx">login</button><br/>
+            <a href="registration.php"><button class="bottone-superiore-dx">REGISTRATI</button></a>
+                    <a href="login.php"><button class="bottone-superiore-sx">LOGIN</button><br/></a>
                     <section class="paragrafo">
                         <h1>Registrati</h1>
                         <p> ciao,<br/> inserisci le tue credenziali per registrarti </p>

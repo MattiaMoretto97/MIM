@@ -13,19 +13,14 @@ if (!$conn) {
 }
 
 $db = new PDO($dsn, $username, $password);
-$query = "SELECT COUNT(idLibro)AS desiderato,Titolo FROM `desiderati` 
-INNER JOIN libri 
-ON desiderati.idLibro = libri.id 
-WHERE nascondi=1 
-GROUP BY Titolo 
-ORDER BY desiderato DESC LIMIT 10";
+$query = "Select * FROM utenti WHERE idRuolo = 3 ORDER BY cognome ASC";
 
-$utenti = array();
+$caseEditrici = array();
 $sth = $db->query($query);
 while( $row = $sth->fetch(PDO::FETCH_ASSOC) ) {
-  $utenti[] = $row; 
+  $caseEditrici[] = $row; 
 }
-    echo '<pre>'. json_encode($utenti);
+    return $caseEditrici;
 
 mysqli_close($conn);
 

@@ -1,0 +1,139 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['superadmin'])) {
+  header("Location: ../Unauthorized.html");
+  die();
+}
+
+include "../php/listaLibri.php";
+?>
+
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Superadmin</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/custom/navbarCss.css">
+  <link rel="stylesheet" href="../css/custom/searchBar.css">
+  <link rel="stylesheet" href="../css/custom/scrollbarX.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg border border-dark ">
+    <!-- Image and text -->
+    <nav class="navbar">
+      <div class="d-flex justify-content-start" id="NavBarLogo">
+        <a class="navbar-brand" href="#">
+          <img src="../img/logo.png" width="150" height="50" class="d-inline-block align-top" alt="">
+        </a>
+      </div>
+    </nav>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="homeSuperadmin.php" style="color: black ;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="listaLibri.php" style="color: red;"><u>Lista Libri</u></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: black;">Aggiungi libro</a>
+        </li>
+      </ul>
+    </div>
+    <div class="d-flex justify-content-end">
+      <a href="#" data-toggle="modal" data-target="#exampleModal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle icon" viewBox="0 0 16 16">
+          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+        </svg>
+      </a>
+      <a class="btn" style="margin-top:5px; margin-bottom:5px" href="../php/logout.php">Logout</a>
+    </div>
+  </nav>
+
+   <!-- table -->
+   </div>
+   <div class="flex items-center justify-between mt-6">
+        <a href="homeSuperadmin.php"><button class="border-2 border-black ml-2 text-black font-bold py-2 px-4 rounded">Indietro</button></a>
+        <a href="aggiungiLibro.php"><button class="border-2 bg-green-600 mr-2 border-black text-black font-bold py-2 px-4 rounded">Aggiungi</button></a>
+    </div>
+    <div class="flex justify-center items-center">
+
+        <h1 class="pb-14 pt-2 uppercase font-bold">Lista Libri</h1>
+    </div>
+    <table class="min-w-full leading-normal mb-24">
+        <thead>
+            <tr>
+                <th class="px-5 py-3 border-2 border-black bg-gray-100 text-left text-s font-semibold text-gray-600 uppercase tracking-wider">
+                    Titolo
+                </th>
+                <th class="px-5 py-3 border-2 border-black bg-gray-100 text-left text-s font-semibold text-gray-600 uppercase tracking-wider">
+                    Autore
+                </th>
+                <th class="px-5 py-3 border-2 border-black bg-gray-100 text-left text-s font-semibold text-gray-600 uppercase tracking-wider">
+                    Casa editrice
+                </th>
+                <th class="px-5 py-3 border-2 border-black bg-gray-100 text-left text-s font-semibold text-gray-600 uppercase tracking-wider">
+
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($libri as $index => $libro) { ?>
+                <tr>
+                    <td class="px-5 pb-2 pt-4 border-b border-black bg-white text-s">
+                        <div class="flex items-center">
+                            <div class="ml-3">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    <?= $libro['titolo'] ?>
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-5 pb-2 pt-4 border-b border-black bg-white text-s">
+                        <p class="text-gray-900 whitespace-no-wrap">
+                            <?= $libro['autore'] ?>
+                        </p>
+                    </td>
+                    <td class="px-5 pb-2 pt-4 border-b border-black bg-white text-s">
+                        <p class="text-gray-900 whitespace-no-wrap">
+                            <?= $libro['casaEditrice'] ?>
+                        </p>
+                    </td>
+                    <td class="px-5 pb-3 pt-2 border-b border-black bg-white text-s text-center">
+                        <span class="relative inline-block px-3 py-1 font-semibold leading-tight">
+                            <a href="dettaglioLibro.php?id=<?=$libro['id']?>"><button class="border-2 border-black font-bold py-2 px-4 rounded" type="submit">👁️</button></a>
+                        </span>
+                        <span class="relative inline-block px-3 py-1 font-semibold leading-tight">
+                            <a href="../php/deleteLibro.php?id=<?=$libro['id']?>"><button class="border-2 border-black font-bold py-2 px-4 rounded" type="submit">🗑️</button></a>
+                        </span>
+                    </td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+    </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="text-center p-3 fixed-bottom" style="background-color: black; color:white; margin-bottom:0px">
+      © 2021 Copyright:
+      <a class="text-white">Bookique</a>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

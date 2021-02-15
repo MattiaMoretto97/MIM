@@ -13,14 +13,14 @@ if (!$conn) {
 }
 
 $db = new PDO($dsn, $username, $password);
-$query = "Select * FROM libri WHERE nascondi=1 ORDER BY id DESC LIMIT 10";
+$query = "Select * FROM libri WHERE nascondi=1 ORDER BY rand() DESC LIMIT 30";
 
-$libriNuovi = array();
+$libriRandom = array();
 $sth = $db->query($query);
 while( $row = $sth->fetch(PDO::FETCH_ASSOC) ) {
-  $libriNuovi[] = $row; 
+  $libriRandom[] = $row; 
 }
-    return $libriNuovi;
+    return $libriRandom;
 
 mysqli_close($conn);
 
