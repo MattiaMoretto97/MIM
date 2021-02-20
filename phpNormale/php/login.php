@@ -43,14 +43,12 @@ $password_db_dcr = openssl_decrypt($prova, $cipher, $passphrase, $options, $iv);
 print_r($password_db_dcr);
 
 
-<<<<<<< HEAD
 if ($password_db_dcr === $password) {
   
   $queryCheckUser = "SELECT * FROM utenti WHERE email = ? AND password = ?";
-=======
+}
 
 $statement = mysqli_prepare($conn, $queryCheckUser);
->>>>>>> d2c7f742060e044ca2a0d45e3cf55bf676e71ac2
 
   $statement = mysqli_prepare($conn, $queryCheckUser);
 
@@ -67,47 +65,30 @@ $statement = mysqli_prepare($conn, $queryCheckUser);
     die();
   }
 
-<<<<<<< HEAD
-  $count = mysqli_num_rows($result);
+print_r($count);
 
-  if ($count == 0) {
-    die("Utente non trovato");
-  }
+if ($count == 0) {
+  die("Utente non trovato");
+  header("Location: login.php");
+}
 
-  $user = mysqli_fetch_assoc($result);
+$user = mysqli_fetch_assoc($result);
+if ($user['idRuolo'] == 2) {
 
   session_start();
   $_SESSION['user'] = $user;
-
   header("Location: ../lettore/homeUtente.php");
+
+} elseif ($user['idRuolo'] === 3) {
+
+  session_start();
+  $_SESSION['casaEditrice'] = $user;
+  header("Location: ../superadmin/homeUtente.php");
+} else {
+
+  session_start();
+  $_SESSION['superadmin'] = $user;
+  header("Location: ../superadmin/homeSuperadmin.php");
 }
-=======
-print_r($count);
-
-// if ($count == 0) {
-//   die("Utente non trovato");
-//   header("Location: login.php");
-// }
-
-// $user = mysqli_fetch_assoc($result);
-// print_r($user);
-// if ($user['idRuolo'] == 2) {
-
-//   session_start();
-//   $_SESSION['user'] = $user;
-//   header("Location: ../lettore/homeUtente.php");
-
-// } elseif ($user['idRuolo'] === 3) {
-
-//   session_start();
-//   $_SESSION['casaEditrice'] = $user;
-//   header("Location: ../superadmin/homeUtente.php");
-// } else {
-
-//   session_start();
-//   $_SESSION['superadmin'] = $user;
-//   header("Location: ../superadmin/homeSuperadmin.php");
-// }
->>>>>>> d2c7f742060e044ca2a0d45e3cf55bf676e71ac2
 
 ?>
