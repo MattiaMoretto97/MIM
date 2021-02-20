@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 include "autoload.php";
 
 $cipher = env('cipher');
@@ -6,49 +7,78 @@ print_r($cipher);
 $passphrase = env('passphrase');
 $options = env('options');
 $iv = env('iv');
+=======
+$servername = "localhost";
+$dsn = 'mysql:dbname=bookique;host=127.0.0.1';
+$username = "root";
+$password_a = "";
+$dbname = "bookique";
 
-$conn = mysqli_connect("localhost", "root", "");
-
-$connectError = mysqli_connect_error($conn);
-
-if ($connectError != null) {
-  echo "Errore di connessione!<br>";
-  echo $connectError;
-  die();
+// Create connection
+$conn = mysqli_connect($servername, $username, $password_a, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
 }
 
-mysqli_select_db($conn, "bookique");
-
-$error = mysqli_error($conn);
-
-if ($error != null) {
-  echo "Errore di selezione dataBase! <br>";
-  echo $error;
-  die();
-}
+$cipher="aes-256-cbc-hmac-sha256";
+$passphrase = 'ciao';
+$options = 0;
+$ivlen = openssl_cipher_iv_length($cipher);
+$iv = openssl_random_pseudo_bytes($ivlen);
+>>>>>>> main
 
 $email = $_REQUEST['email'];
+$password = $_REQUEST['password'];
+
+$db = new PDO($dsn, $username, $password_a);
+$query_select = "SELECT password FROM utenti WHERE email = '".$email."'";
+
+$sth = $db->query($query_select);
+while( $row = $sth->fetch(PDO::FETCH_ASSOC) ) {
+  $password_db = $row; 
+}
+
+//print_r($password_db['password']);
+$prova = $password_db['password'];
+
+//print_r($prova);
+//print_r($cipher);
+//print_r($passphrase);
+//print_r($options);
+//print_r($iv);
+
+$password_db_dcr = openssl_decrypt($prova, $cipher, $passphrase, $options, $iv);
+
+<<<<<<< HEAD
+$email = $_REQUEST['email'];
 $password = openssl_encrypt($_REQUEST['password'], $cipher,$passphrase,$options,$iv);
+=======
+print_r($password_db_dcr);
+>>>>>>> main
 
-$queryCheckUser = "SELECT * FROM utenti WHERE email = ? AND password = ?";
 
+if ($password_db_dcr === $password) {
+  
+  $queryCheckUser = "SELECT * FROM utenti WHERE email = ? AND password = ?";
+}
 
 $statement = mysqli_prepare($conn, $queryCheckUser);
 
-mysqli_stmt_bind_param($statement, "ss", $email, $password);
+  $statement = mysqli_prepare($conn, $queryCheckUser);
 
-mysqli_stmt_execute($statement);
+  mysqli_stmt_bind_param($statement, "ss", $email, $password);
 
-$result = mysqli_stmt_get_result($statement);
+  mysqli_stmt_execute($statement);
 
-$error = mysqli_stmt_error($statement);
+  $result = mysqli_stmt_get_result($statement);
 
-if ($error != null) {
-  echo $error;
-  die();
-}
+  $error = mysqli_stmt_error($statement);
 
-$count = mysqli_num_rows($result);
+  if ($error != null) {
+    echo $error;
+    die();
+  }
 
 print_r($count);
 
@@ -58,7 +88,10 @@ if ($count == 0) {
 }
 
 $user = mysqli_fetch_assoc($result);
+<<<<<<< HEAD
 print_r($user);
+=======
+>>>>>>> main
 if ($user['idRuolo'] == 2) {
 
   session_start();
