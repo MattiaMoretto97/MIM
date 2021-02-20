@@ -23,9 +23,9 @@
                     </section>
                     <form class="pulsanti-inserimento" method="POST" action="php/login.php">
                         <label for="fname"></label>
-                        <input type="text" id="password" name="email" placeholder="email"><br>
+                        <input type="text" id="password" name="email" placeholder="email" required><br>
                         <label for="lname"></label>
-                        <input type="password" id="password" name="password" placeholder="password"><br>                       
+                        <input type="password" id="password" name="password" placeholder="password" required><br>                       
                     
                     <!-- <form class="checkbox">
                         <section  class="checkbox" title="checkbox">
