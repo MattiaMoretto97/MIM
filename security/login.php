@@ -1,6 +1,7 @@
 <?php
 include "autoload.php";
 $cipher =   env('cipher');
+print_r($cipher);
 $passphrase = env('passphrase');
 $options = env('options');
 $ivlen=openssl_cipher_iv_length($cipher);

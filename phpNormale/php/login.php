@@ -25,6 +25,7 @@ $password = $_REQUEST['password'];
 
 $queryCheckUser = "SELECT * FROM utenti WHERE email = ? AND password = ?";
 
+
 $statement = mysqli_prepare($conn, $queryCheckUser);
 
 mysqli_stmt_bind_param($statement, "ss", $email, $password);
@@ -42,25 +43,31 @@ if ($error != null) {
 
 $count = mysqli_num_rows($result);
 
-if ($count == 0) {
-  die("Utente non trovato");
-  header("Location: login.php");
-}
+print_r($count);
 
-$user = mysqli_fetch_assoc($result);
-print_r($user);
-if ($user['idRuolo'] == 2) {
-  session_start();
-  $_SESSION['user'] = $user;
-  header("Location: ../lettore/homeUtente.php");
-} elseif ($user['idRuolo'] === 3) {
-  session_start();
-  $_SESSION['casaEditrice'] = $user;
+// if ($count == 0) {
+//   die("Utente non trovato");
+//   header("Location: login.php");
+// }
 
-  header("Location: ../superadmin/homeSuperadmin.php");
-} else {
-  session_start();
-  $_SESSION['superadmin'] = $user;
+// $user = mysqli_fetch_assoc($result);
+// print_r($user);
+// if ($user['idRuolo'] == 2) {
 
-  header("Location: ../superadmin/homeSuperadmin.php");
-}
+//   session_start();
+//   $_SESSION['user'] = $user;
+//   header("Location: ../lettore/homeUtente.php");
+
+// } elseif ($user['idRuolo'] === 3) {
+
+//   session_start();
+//   $_SESSION['casaEditrice'] = $user;
+//   header("Location: ../superadmin/homeUtente.php");
+// } else {
+
+//   session_start();
+//   $_SESSION['superadmin'] = $user;
+//   header("Location: ../superadmin/homeSuperadmin.php");
+// }
+
+?>
