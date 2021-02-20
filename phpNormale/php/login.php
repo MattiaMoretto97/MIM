@@ -1,4 +1,13 @@
 <?php
+<<<<<<< HEAD
+include "autoload.php";
+
+$cipher = env('cipher');
+print_r($cipher);
+$passphrase = env('passphrase');
+$options = env('options');
+$iv = env('iv');
+=======
 $servername = "localhost";
 $dsn = 'mysql:dbname=bookique;host=127.0.0.1';
 $username = "root";
@@ -17,6 +26,7 @@ $passphrase = 'ciao';
 $options = 0;
 $ivlen = openssl_cipher_iv_length($cipher);
 $iv = openssl_random_pseudo_bytes($ivlen);
+>>>>>>> main
 
 $email = $_REQUEST['email'];
 $password = $_REQUEST['password'];
@@ -40,7 +50,12 @@ $prova = $password_db['password'];
 
 $password_db_dcr = openssl_decrypt($prova, $cipher, $passphrase, $options, $iv);
 
+<<<<<<< HEAD
+$email = $_REQUEST['email'];
+$password = openssl_encrypt($_REQUEST['password'], $cipher,$passphrase,$options,$iv);
+=======
 print_r($password_db_dcr);
+>>>>>>> main
 
 
 if ($password_db_dcr === $password) {
@@ -73,6 +88,10 @@ if ($count == 0) {
 }
 
 $user = mysqli_fetch_assoc($result);
+<<<<<<< HEAD
+print_r($user);
+=======
+>>>>>>> main
 if ($user['idRuolo'] == 2) {
 
   session_start();

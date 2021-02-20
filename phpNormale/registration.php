@@ -22,15 +22,15 @@
                     </section>
                     <form class="pulsanti-inserimento" method="post" action="php/registration.php">
                         <label for="fname"></label>
-                        <input type="text" id="nome" name="nome" placeholder="nome"><br>
+                        <input type="text" id="nome" name="nome" placeholder="nome" required><br>
                         <label for="lname"></label>
-                        <input type="text" id="cognome" name="cognome" placeholder="cognome"><br>
+                        <input type="text" id="cognome" name="cognome" placeholder="cognome" required><br>
                         <label for="fname"></label>
-                        <input type="text" id="password" name="password" placeholder="password"><br>
+                        <input type="text" id="password" name="password" placeholder="password" required><br>
                         <label for="lname"></label>
-                        <input type="text" id="cf" name="cf" placeholder="CF"><br>
+                        <input type="text" id="cf" name="cf" placeholder="CF" required><br>
                         <label for="lname"></label>
-                        <input type="text" id="email" name="email" placeholder="Email"><br>
+                        <input type="text" id="email" name="email" placeholder="Email" required><br>
                         <select class="tipologia" id="ruolo" name="ruolo">
                         <option value="lettore">lettore</option>
                         <option value="casaeditrice">casa editrice </option>

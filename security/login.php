@@ -1,15 +1,16 @@
 <?php
 include "autoload.php";
 $cipher =   env('cipher');
-print_r($cipher);
 $passphrase = env('passphrase');
 $options = env('options');
-$ivlen=openssl_cipher_iv_length($cipher);
-$iv = openssl_random_pseudo_bytes($ivlen);
+$iv = openssl_random_pseudo_bytes(16);
+print_r($iv);
 $pippoticripto = openssl_encrypt('pippo', $cipher,$passphrase,$options,$iv);
 print_r($pippoticripto);
 
-$pippotidecripto = openssl_decrypt ( $pippoticripto , $cipher,$passphrase , $options, $iv);
-'<br>';
+$ivd = openssl_random_pseudo_bytes(16);
+print_r($ivd);
+$pippotidecripto = openssl_decrypt ( $pippoticripto , $cipher,$passphrase , $options, $ivd);
+
 print_r($pippotidecripto);
 ?>

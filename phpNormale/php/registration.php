@@ -6,7 +6,6 @@ print_r($cipher);
 $passphrase = env('passphrase');
 $options = env('options');
 $iv = env('iv');
-
 $conn = mysqli_connect("localhost", "root", "");
         
 $connectError = mysqli_connect_error($conn);
