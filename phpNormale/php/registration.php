@@ -1,4 +1,11 @@
 <?php
+include "autoload.php";
+
+$cipher = env('cipher');
+print_r($cipher);
+$passphrase = env('passphrase');
+$options = env('options');
+$iv = env('iv');
 
 $conn = mysqli_connect("localhost", "root", "");
         
@@ -20,10 +27,11 @@ if ($error != null) {
     die();
 }
 
+
 $nome = $_REQUEST['nome'];
 $cognome = $_REQUEST['cognome'];
 $email = $_REQUEST['email'];
-$password = password_hash(strval($_REQUEST['password']), PASSWORD_BCRYPT);
+$password = openssl_encrypt($_REQUEST['password'], $cipher,$passphrase,$options,$iv);
 $cf = $_REQUEST['cf'];
 if ($_REQUEST["ruolo"] === "lettore"){
     $ruolo = 2;
